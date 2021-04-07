@@ -1,0 +1,21 @@
+.main-nav__list {
+  list-style: none;
+}
+.main-nav__item {
+  width: 320px;
+  height: 66px;
+  text-transform: uppercase;
+  text-decoration: none;
+  .fonts();
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding-top: 24px;
+  &:not(:last-child) {
+    border-bottom: 1px solid @line-nav-grey;
+  }
+}
+.main-nav__item a {
+  color: @basic-black;
+}
