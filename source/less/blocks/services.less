@@ -25,12 +25,18 @@
   text-transform: uppercase;
   &::after {
     content: url("../img/icon_arrow.png");
+    padding-left: 17px;
   }
 }
 
 .services__title--slim::before {
   content: url("../img/cat_slim.png");
+  vertical-align: middle;
 }
 .services__title--pro::before {
   content: url("../img/cat_pro.png");
+  vertical-align: middle
+}
+.services__wrapper{
+  .wrapper-mobile();
 }

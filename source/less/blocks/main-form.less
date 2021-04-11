@@ -1,0 +1,215 @@
+.main-form__wrapper {
+  .wrapper-mobile();
+}
+.main-form__title {
+  .fonts();
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 35px;
+}
+.main-form__subtitle {
+  .fonts();
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.main-form__info-cats {
+  border: none;
+}
+.main-form__info-cats .main-form__list {
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid @special_grey-4;
+}
+.main-form__item {
+  .fonts();
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-form__item:not(:last-child) {
+  margin-bottom: 13px;
+}
+.main-form__item:last-child {
+  margin-bottom: 24px;
+}
+.main-form__item input {
+  border: 1px solid @grey_border_input;
+  height: 45px;
+  &::placeholder {
+    color: @special_dark-grey;
+    text-transform: uppercase;
+    .fonts();
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.main-form__filter-list {
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid @special_grey-4;
+}
+.main-form__filter-item label {
+  position: relative;
+  .fonts();
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.main-form__filter-item--radio label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @special_grey;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.main-form__filter-item--radio input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  background-color: @basic_green;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+.main-form__filter-item:not(:last-child) {
+  margin-bottom: 13px;
+}
+.main-form__filter-item:last-child {
+  margin-bottom: 19px;
+}
+.main-form__contacts {
+  border: none;
+}
+.main-form__contacts .main-form__list {
+  padding: 0;
+}
+.main-form__contacts .main-form__title {
+  .fonts();
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: -5px;
+    width: 99px;
+    height: 2px;
+    background-color: @basic_green;
+  }
+}
+.main-form__email {
+  background: url(../img/icon_email.png) no-repeat center right;
+  width: 219px;
+  background-position: 180px;
+}
+.main-form__tel {
+  background: url(../../img/icon_phone.png) no-repeat center right;
+  background-position: 170px;
+  width: 204px;
+}
+.main-form__comment {
+  border: none;
+}
+.main-form__comment .main-form__title {
+  .fonts();
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 150px;
+    width: 158px;
+    height: 2px;
+    background-color: @basic_green;
+  }
+}
+
+.main-form__comment .main-form__item {
+  width: 280px;
+  height: 150px;
+  border: 1px solid @grey_border_input;
+  resize: none;
+  &::placeholder {
+    color: @special_dark-grey;
+    text-align: center;
+  }
+}
+.main-form__additionally {
+  border: none;
+}
+.main-form__additionally .main-form__title {
+  .fonts();
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 170px;
+    width: 136px;
+    height: 2px;
+    background-color: @basic_green;
+  }
+}
+.main-form__additionally .main-form__list {
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.main-form__additionally .main-form__item:not(:last-child) {
+  margin-bottom: 13px;
+}
+.main-form__checkbox label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @special_grey;
+  margin-right: 15px;
+}
+.main-form__additionally .main-form__item {
+  position: relative;
+}
+.main-form__checkbox input:checked + label::after {
+  content: url(../../img/checkbox_mark.png);
+  position: absolute;
+  left: 7px;
+  top: 7px;
+}
+.main-form__button {
+  width: 280px;
+  height: 40px;
+  background-color: @basic_green;
+  border: none;
+  .fonts();
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @basic_white;
+}
