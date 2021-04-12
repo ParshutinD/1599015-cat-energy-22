@@ -3,50 +3,52 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="./css/style.css" rel="stylesheet" />
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__logo">
-        <a href="index.html">
-          <img
-            class="page-header__logo-image"
-            src="img/logo-mobile.png"
-            width="33"
-            height="37"
-            alt="Кэт энерджи"
-          />
-        </a>
-        <a href="index.html"
-          ><img
-            class="page-header__logo-image"
-            src="img/logo2.svg"
-            width="101"
-            height="18"
-            alt="Кэт энерджи"
-        /></a>
-      </div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-nav__wrapper">
+      <div class="main-nav__wrapper">
+        <div class="page-header__logo">
+          <a>
+            <img
+              class="page-header__logo-image"
+              src="img/logo-mobile.png"
+              width="33"
+              height="37"
+              alt="Кэт энерджи"
+            />
+          </a>
+          <a
+            ><img
+              class="page-header__logo-image"
+              src="img/logo2.svg"
+              width="101"
+              height="18"
+              alt="Кэт энерджи"
+          /></a>
+        </div>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--current">
-              <a href="index.html">Главная</a>
+              <a href="">Главная</a>
             </li>
             <li class="main-nav__item">
               <a href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="main-nav__item main-nav__item--current">
-              <a href="">Подбор программы</a>
+            <li class="main-nav__item">
+              <a href="form.html">Подбор программы</a>
             </li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
     <main class="main-form">
-      <h1 class="main-form__title">Подбор программы</h1>
       <div class="main-form__wrapper">
+        <h1 class="main-form__title">Подбор программы</h1>
         <form method="GET" action="https://echo.htmlacademy.ru">
           <fieldset class="main-form__info-cats">
             <p class="main-form__subtitle">
@@ -55,28 +57,49 @@
             <ul class="main-form__list">
               <li class="main-form__item">
                 <label for="cat-name">Имя:*</label>
-                <input id="cat-name" type="text" placeholder="Барсик" />
+                <input
+                  required
+                  id="cat-name"
+                  type="text"
+                  placeholder="Барсик"
+                />
               </li>
               <li class="main-form__item">
                 <label for="weight">Вес(КГ):*</label>
-                <input id="weight" type="number" placeholder="7" />
+                <input required id="weight" type="number" placeholder="7" />
               </li>
               <li class="main-form__item">
                 <label for="years">Возраст (лет):</label>
                 <input id="years" type="number" placeholder="7" />
               </li>
             </ul>
+
             <ul class="main-form__filter-list">
               <li class="main-form__filter-item main-form__filter-item--radio">
-                <input id="filter-slim" type="radio" name="program" />
+                <input
+                  class="visually-hidden"
+                  id="filter-slim"
+                  type="radio"
+                  name="program"
+                />
                 <label for="filter-slim">Похудение</label>
               </li>
               <li class="main-form__filter-item main-form__filter-item--radio">
-                <input id="filter-gain" type="radio" name="program" />
+                <input
+                  class="visually-hidden"
+                  id="filter-gain"
+                  type="radio"
+                  name="program"
+                />
                 <label for="filter-gain">Набор массы</label>
               </li>
               <li class="main-form__filter-item main-form__filter-item--radio">
-                <input id="filter-advice" type="radio" name="program" />
+                <input
+                  class="visually-hidden"
+                  id="filter-advice"
+                  type="radio"
+                  name="program"
+                />
                 <label for="filter-advice">Не знаю (Нужен ваш совет)</label>
               </li>
             </ul>
@@ -89,17 +112,21 @@
               <li class="main-form__item">
                 <label for="email">E-mail:*</label>
                 <input
+                  required
                   id="email"
                   type="email"
                   placeholder="kuklachev@gmail.com"
+                  class="main-form__email"
                 />
               </li>
               <li class="main-form__item">
                 <label for="telephone">Телефон:*</label>
                 <input
+                  required
                   id="telephone"
                   type="tel"
                   placeholder="8 (960) 900-60-90"
+                  class="main-form__tel"
                 />
               </li>
             </ul>
@@ -117,20 +144,40 @@
           <fieldset class="main-form__additionally">
             <legend class="main-form__title">Дополнительно</legend>
             <ul class="main-form__list">
-              <li class="main-form__item">
-                <input type="checkbox" id="nosugar" name="sweetener" />
+              <li class="main-form__item main-form__checkbox">
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  id="nosugar"
+                  name="sweetener"
+                />
                 <label for="nosugar">Сахарозаменитель</label>
               </li>
-              <li class="main-form__item">
-                <input type="checkbox" id="water" name="water" />
+              <li class="main-form__item main-form__checkbox">
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  id="water"
+                  name="water"
+                />
                 <label for="water">Питьевая вода</label>
               </li>
-              <li class="main-form__item">
-                <input type="checkbox" id="milk" name="milk" />
+              <li class="main-form__item main-form__checkbox">
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  id="milk"
+                  name="milk"
+                />
                 <label for="milk">Молоко</label>
               </li>
-              <li class="main-form__item">
-                <input type="checkbox" id="vitamins" name="vitamins" />
+              <li class="main-form__item main-form__checkbox">
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  id="vitamins"
+                  name="vitamins"
+                />
                 <label for="vitamins">Витамины</label>
               </li>
             </ul>
@@ -160,8 +207,8 @@
         style="border: 0"
         allowfullscreen=""
         loading="lazy"
+        class="page-footer__map"
       ></iframe>
-
       <div class="page-footer__social page-footer__wrapper">
         <a
           ><img
