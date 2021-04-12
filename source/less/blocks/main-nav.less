@@ -1,5 +1,6 @@
 .main-nav__list {
   list-style: none;
+  padding: 0;
 }
 .main-nav__item {
   width: 320px;
@@ -12,13 +13,40 @@
   line-height: 20px;
   text-align: center;
   padding-top: 24px;
-  &:not(:last-child) {
-    border-bottom: 1px solid @line-nav-grey;
-  }
+  border-bottom: 1px solid @line-nav-grey;
 }
 .main-nav__item a {
   color: @basic-black;
 }
 .main-nav__wrapper {
   .wrapper-mobile();
+}
+.main-nav__toggle--close {
+  border: none;
+  background: none;
+  width: 18px;
+  height: 18px;
+  background: url(../img/menu-close.png);
+  background-size: cover;
+  vertical-align: middle;
+}
+.main-nav__toggle--open {
+  border: none;
+  background: none;
+  width: 18px;
+  height: 18px;
+  background: url(../../img/menu-open.png);
+  background-size: cover;
+  vertical-align: middle;
+}
+.page-header__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid @line-nav-grey;
+  padding-bottom: 24px;
+}
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
 }
