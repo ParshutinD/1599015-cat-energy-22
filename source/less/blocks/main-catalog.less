@@ -1,0 +1,122 @@
+.main-catalog__wrapper {
+  .wrapper-mobile();
+}
+
+.main-catalog__title {
+  .fonts();
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  padding-bottom: 41px;
+}
+
+.main-catalog__list {
+  list-style: none;
+  padding: 0;
+}
+
+.main-catalog__item {
+  width: 320px;
+  height: 190px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-bottom: 1px solid @special_grey-2;
+
+  &:not(:first-child) {
+    padding-top: 25px;
+  }
+
+  &:first-child {
+    border-top: 1px solid @special_grey-2;
+    padding-top: 19px;
+  }
+}
+
+.main-catalog__button {
+  height: 20px;
+  padding: 10px 109px 10px 109px;
+  background-color: @basic_green;
+  color: @basic_white;
+  text-transform: uppercase;
+  .fonts();
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.main-catalog__table-title a {
+  .fonts();
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @special_dark-grey-2;
+  align-self: flex-start;
+}
+
+.main-catalog__table-title {
+  width: 76px;
+  text-align: left;
+}
+
+.main-catalog__table {
+  width: 150px;
+}
+
+.main-catalog__table-cell {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.main-catalog__table-cell:first-child {
+  text-align: left;
+}
+
+.main-catalog__table-cell:last-child {
+  text-align: right;
+}
+
+.main-catalog__table-cell:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.main-catalog__still-title {
+  .fonts();
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  position: relative;
+  padding-top: 23px;
+
+  &::before {
+    content: url("../img/plus.png");
+    position: absolute;
+    top: -25px;
+    left: 74px;
+  }
+}
+
+.main-catalog__subtitle {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.main-catalog__still {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid @special_grey-2;
+  padding-bottom: 25px;
+}
+
+.main-catalog__buttun--still {
+  background-color: @basic_grey;
+  color: @special_dark-grey;
+}
