@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Кэт энерджи</title>
     <link href="./css/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -15,7 +16,7 @@
               src="img/logo-mobile.png"
               width="33"
               height="37"
-              alt="Кэт энерджи"
+              alt="Кэт энерджи лого"
             />
           </a>
           <a
@@ -29,6 +30,26 @@
           <button class="main-nav__toggle--close" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
+        </div>
+        <div class="page-header__logo-medium">
+          <a>
+            <img
+              src="img/logo-tablet.png"
+              width="174"
+              height="51"
+              alt="Кэт энерджи лого"
+            />
+          </a>
+        </div>
+        <div class="page-header__logo-large">
+          <a>
+            <img
+              src="img/logo-desktop.png"
+              width="202"
+              height="59"
+              alt="Кэт энерджи лого"
+            />
+          </a>
         </div>
         <nav class="main-nav">
           <ul class="main-nav__list">
@@ -49,15 +70,22 @@
       <h1 class="visually-hidden">Интернет магазин Кэт энерджи</h1>
       <section class="about-us">
         <div class="about-us__wrapper">
+          <h2 class="about-us__title">Функциональное питание для котов</h2>
+          <p class="about-us__subtitle">Занялся собой? Займись котом!</p>
           <img
-            class="about-us__image"
+            class="about-us__image-small"
             src="img/index-can-mobile1.png"
             width="280"
             height="270"
             alt="Корм с курицей"
           />
-          <h2 class="about-us__title">Функциональное питание для котов</h2>
-          <p class="about-us__subtitle">Занялся собой? Займись котом!</p>
+          <img
+            class="about-us__image-large"
+            src="img/index-can-tablet1.png"
+            width="709"
+            height="609"
+            alt="Корм с курицей"
+          />
           <a class="about-us__link" href="form.html">Подобрать программу</a>
         </div>
       </section>
@@ -66,7 +94,7 @@
         <div class="services__wrapper">
           <div class="services__item">
             <h3 class="services__title services__title--slim">Похудение</h3>
-            <p class="services__subtitle">
+            <p class="services__subtitle services__subtitle--slim">
               Ваш кот весит больше собаки и почти утратил способность лазить по
               деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу
               сбросить лишний вес.
@@ -75,7 +103,7 @@
           </div>
           <div class="services__item">
             <h3 class="services__title services__title--pro">Набор массы</h3>
-            <p class="services__subtitle">
+            <p class="services__subtitle services__subtitle--pro">
               Заработать авторитет среди дворовых котов и даже собак? Серия Cat
               Energy Pro поможет вашему коту нарастить необходимые мышцы!
             </p>
@@ -108,14 +136,16 @@
       </section>
       <section class="example">
         <div class="example__wrapper">
-          <h2 class="example__main-title">Живой пример</h2>
-          <p class="example__subtitle">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на
-            Cat Energy Slim. Отличный результат без изнуряющих тренировок! При
-            этом он не менял своих привычек и по-прежнему спит по 16 часов в
-            день.
-          </p>
-          <h3 class="example__title">Затраты на питание: 15 000 РУБ.</h3>
+          <div class="example__wrap">
+            <h2 class="example__main-title">Живой пример</h2>
+            <p class="example__subtitle">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм
+              на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+              При этом он не менял своих привычек и по-прежнему спит по 16 часов
+              в день.
+            </p>
+            <h3 class="example__title">Затраты на питание: 15 000 РУБ.</h3>
+          </div>
           <div class="example-slider">
             <img
               class="example-slider__image"
@@ -125,15 +155,34 @@
               alt="Кот до применения нашего корма"
             />
             <img
-              class="example-slider__image"
+              class="visually-hidden example-slider__image"
               src="img/cat-after.png"
               width="251"
               height="240"
-              alt="Кот до применения нашего корма"
+              alt="Кот после применения нашего корма"
             />
-            <label for="before-after">Было</label>
+            <img
+              class="example-slider__image--large"
+              src="img/image_cat_tablet.png"
+              width="708"
+              height="620"
+              alt="Кот до/после применения нашего корма"
+            />
+            <div class="expample__range-controls">
+              <div class="expample__scale">
+                <div class="example__bar"></div>
+              </div>
+            </div>
+            <div class="expample__range-controls-large">
+              <div class="expample__scale-large">
+                <div class="example__toggle"></div>
+              </div>
+            </div>
+            <label class="visually-hidden" for="before-after"
+              >Полоса прокрутки</label
+            >
             <input
-              class="example-slider__range"
+              class="visually-hidden example-slider__range"
               type="range"
               id="before-after"
               min="0"
@@ -154,21 +203,29 @@
           </p>
         </div>
       </div>
-
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616879214042!5m2!1sru!2sru"
-        width="600"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        class="page-footer__map"
-      ></iframe>
-
+      <div class="page-footer__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616879214042!5m2!1sru!2sru"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          class="page-footer__map"
+        ></iframe>
+        <div class="cooperation-map">
+          <h3 class="cooperation__title">
+            Приглашаем к сотрудничеству дилеров!
+          </h3>
+          <p class="cooperation__subtitle">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          </p>
+        </div>
+      </div>
       <div class="page-footer__social page-footer__wrapper">
         <a
           ><img
-            class="page-header__logo-image"
+            class="page-footer__logo-image"
             src="img/logo2.svg"
             width="128"
             height="24"
@@ -187,7 +244,7 @@
           <li class="page-footer__item page-footer__item--instagram">
             <a href="https://www.instagram.com/htmlacademy/"
               ><img
-                src="img/icon_instagram.png"
+                src="img/icon_instagram.svg"
                 width="16"
                 height="16"
                 alt="Instagram"
@@ -196,18 +253,27 @@
           <li class="page-footer__item page-footer__item--facebook">
             <a href="https://www.facebook.com/htmlacademy"
               ><img
-                src="img/icon_facebook.png"
+                src="img/icon_facebook.svg"
                 width="22"
                 height="22"
                 alt="Facebook"
             /></a>
           </li>
         </ul>
-        <div class="page-footer__social-academy">
+        <div class="page-footer__social-academy-large">
           <a href="https://htmlacademy.ru/intensive/adaptive">
             <img
               src="img/logo_htmlacademy.png"
               width="281"
+              height="34"
+              alt="html academy"
+          /></a>
+        </div>
+        <div class="page-footer__social-academy-small">
+          <a href="https://htmlacademy.ru/intensive/adaptive">
+            <img
+              src="img/logo_html-small.png"
+              width="163"
               height="34"
               alt="html academy"
           /></a>

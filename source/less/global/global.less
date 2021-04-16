@@ -33,3 +33,18 @@ input[type="number"]:hover,
 input[type="number"]:focus {
   appearance: number-input;
 }
+
+.main-form__content fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__item--current a {
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid @basic_green;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-color: @basic_white;
+  }
+}

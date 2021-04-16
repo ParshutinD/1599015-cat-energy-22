@@ -1,6 +1,16 @@
 .cooperation {
-  width: 320px;
+  min-width: 320px;
   height: 114px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    height: 201px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }
 
 .cooperation__title {
@@ -8,11 +18,45 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 41px;
+    width: 171px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 .cooperation__subtitle {
   font-family: "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 41px;
+    width: 171px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+  }
+}
+
+.cooperation-map {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 201px;
+    background-color: @basic_white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 120px;
+    left: 110px;
+  }
 }
