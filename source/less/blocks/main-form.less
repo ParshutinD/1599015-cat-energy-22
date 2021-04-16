@@ -8,6 +8,7 @@
   font-size: 36px;
   line-height: 36px;
   margin-bottom: 35px;
+  padding-top: 55px;
 }
 
 .main-form__subtitle {
@@ -16,10 +17,15 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  padding-top: 15px;
+  width: 226px;
+  margin-bottom: 40px;
 }
 
 .main-form__info-cats {
   border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .main-form__info-cats .main-form__list {
@@ -37,6 +43,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.main-form__item:nth-child(1) input {
+  width: 228px;
+}
+
+.main-form__item:nth-child(2) input {
+  width: 204px;
 }
 
 .main-form__item:not(:last-child) {
@@ -58,6 +72,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
+    padding-left: 10px;
   }
 }
 
@@ -108,6 +123,8 @@
 
 .main-form__contacts {
   border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .main-form__contacts .main-form__list {
@@ -120,6 +137,9 @@
   font-size: 24px;
   line-height: 26px;
   position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
 
   &::after {
     content: "";
@@ -134,14 +154,14 @@
 
 .main-form__email {
   background: url("../img/icon_email.png") no-repeat center right;
-  width: 219px;
   background-position: 180px;
+  padding: 0;
 }
 
 .main-form__tel {
   background: url("../img/icon_phone.png") no-repeat center right;
   background-position: 170px;
-  width: 204px;
+  padding: 0;
 }
 
 .main-form__comment {
@@ -154,6 +174,9 @@
   font-size: 24px;
   line-height: 26px;
   position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
 
   &::after {
     content: "";
@@ -171,10 +194,12 @@
   height: 150px;
   border: 1px solid @grey_border_input;
   resize: none;
+  margin: 0;
 
   &::placeholder {
     color: @special_dark-grey;
     text-align: center;
+    padding-top: 15px;
   }
 }
 
@@ -188,11 +213,15 @@
   font-size: 24px;
   line-height: 26px;
   position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  padding-top: 20px;
 
   &::after {
     content: "";
     position: absolute;
-    top: 15px;
+    top: 35px;
     left: 170px;
     width: 136px;
     height: 2px;
@@ -243,4 +272,13 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @basic_white;
+}
+
+.main-form__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-form__content p {
+  align-self: center;
 }
