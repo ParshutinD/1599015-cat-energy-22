@@ -107,17 +107,13 @@
     min-width: 120px;
   }
 }
+
 .main-form__item:first-child label {
   @media (min-width: @tablet-width) {
     .fonts();
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
-  }
-}
-.main-form__item input {
-  @media (min-width: @tablet-width) {
-    width: 100%;
   }
 }
 
@@ -149,6 +145,10 @@
     font-size: 16px;
     line-height: 18px;
     padding-left: 10px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
   }
 }
 
@@ -428,12 +428,14 @@
     column-gap: 104px;
   }
 }
+
 .main-form__sendform {
   @media (min-width: @tablet-width) {
     display: flex;
     padding-bottom: 70px;
   }
 }
+
 .main-form__additionally .main-form__item:not(:last-child) {
   margin-bottom: 13px;
 }
