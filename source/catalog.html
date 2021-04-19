@@ -4,21 +4,22 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Кэт энерджи</title>
     <link href="./css/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
   </head>
   <body class="page__body">
     <header class="page-header">
       <div class="main-nav__wrapper">
         <div class="page-header__logo">
-          <a>
+          <a href="index.html">
             <img
               class="page-header__logo-image"
               src="img/logo-mobile.png"
               width="33"
               height="37"
-              alt="Кэт энерджи"
+              alt="Кэт энерджи лого"
             />
           </a>
-          <a
+          <a href="index.html"
             ><img
               class="page-header__logo-image"
               src="img/logo2.svg"
@@ -30,12 +31,32 @@
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
+        <div class="page-header__logo-medium">
+          <a href="index.html">
+            <img
+              src="img/logo-tablet.png"
+              width="174"
+              height="51"
+              alt="Кэт энерджи лого"
+            />
+          </a>
+        </div>
+        <div class="page-header__logo-large">
+          <a href="index.html">
+            <img
+              src="img/logo-desktop.png"
+              width="202"
+              height="59"
+              alt="Кэт энерджи лого"
+            />
+          </a>
+        </div>
         <nav class="main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--current">
+            <li class="main-nav__item">
               <a href="index.html">Главная</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--current">
               <a href="">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
@@ -253,16 +274,18 @@
             </table>
             <a href="" class="main-catalog__button">Заказать</a>
           </li>
+          <li class="main-catalog__still">
+            <h3 class="main-catalog__still-title">
+              Показать еще 100500 товаров
+            </h3>
+            <p class="main-catalog__subtitle">
+              На самом деле вкусов гораздо больше!
+            </p>
+            <a href="" class="main-catalog__button main-catalog__button--still"
+              >Показать все</a
+            >
+          </li>
         </ul>
-        <div class="main-catalog__still">
-          <h3 class="main-catalog__still-title">Показать еще 100500 товаров</h3>
-          <p class="main-catalog__subtitle">
-            На самом деле вкусов гораздо больше!
-          </p>
-          <a href="" class="main-catalog__button main-catalog__buttun--still"
-            >Показать все</a
-          >
-        </div>
         <div class="additional-product">
           <h2 class="additional-product__title">Дополнительные товары</h2>
           <ul class="additional-product__list">
@@ -291,16 +314,16 @@
               <a href="" class="additional-product__button">Заказать</a>
             </li>
           </ul>
-        </div>
-        <img
-          class="catalog-image"
-          src="img/gift.png"
-          width="280"
-          height="289"
-          alt="Закажите все
+          <img
+            class="catalog-image"
+            src="img/gift.png"
+            width="280"
+            height="289"
+            alt="Закажите все
         и получите чехол для
         кота в подарок!"
-        />
+          />
+        </div>
       </div>
     </main>
     <footer class="page-footer">
@@ -314,19 +337,29 @@
           </p>
         </div>
       </div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616879214042!5m2!1sru!2sru"
-        width="600"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        class="page-footer__map"
-      ></iframe>
+      <div class="page-footer__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616879214042!5m2!1sru!2sru"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          class="page-footer__map"
+        ></iframe>
+        <div class="cooperation-map">
+          <h3 class="cooperation__title">
+            Приглашаем к сотрудничеству дилеров!
+          </h3>
+          <p class="cooperation__subtitle">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          </p>
+        </div>
+      </div>
       <div class="page-footer__social page-footer__wrapper">
         <a
           ><img
-            class="page-header__logo-image"
+            class="page-footer__logo-image"
             src="img/logo2.svg"
             width="128"
             height="24"
@@ -345,7 +378,7 @@
           <li class="page-footer__item page-footer__item--instagram">
             <a href="https://www.instagram.com/htmlacademy/"
               ><img
-                src="img/icon_instagram.png"
+                src="img/icon_instagram.svg"
                 width="16"
                 height="16"
                 alt="Instagram"
@@ -354,18 +387,27 @@
           <li class="page-footer__item page-footer__item--facebook">
             <a href="https://www.facebook.com/htmlacademy"
               ><img
-                src="img/icon_facebook.png"
+                src="img/icon_facebook.svg"
                 width="22"
                 height="22"
                 alt="Facebook"
             /></a>
           </li>
         </ul>
-        <div class="page-footer__social-academy">
+        <div class="page-footer__social-academy-large">
           <a href="https://htmlacademy.ru/intensive/adaptive">
             <img
               src="img/logo_htmlacademy.png"
               width="281"
+              height="34"
+              alt="html academy"
+          /></a>
+        </div>
+        <div class="page-footer__social-academy-small">
+          <a href="https://htmlacademy.ru/intensive/adaptive">
+            <img
+              src="img/logo_html-small.png"
+              width="163"
               height="34"
               alt="html academy"
           /></a>
