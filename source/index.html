@@ -4,13 +4,32 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Кэт энерджи</title>
     <link href="./css/style.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon//apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
   </head>
   <body class="page__body">
     <header class="page-header">
       <div class="main-nav__wrapper">
         <div class="page-header__logo">
-          <a>
+          <a tabindex="0" aria-label="Логотип">
             <img
               class="page-header__logo-image"
               src="img/logo-mobile.png"
@@ -19,7 +38,7 @@
               alt="Кэт энерджи лого"
             />
           </a>
-          <a
+          <a tabindex="0" aria-label="Логотип"
             ><img
               class="page-header__logo-image"
               src="img/logo2.svg"
@@ -146,7 +165,19 @@
               При этом он не менял своих привычек и по-прежнему спит по 16 часов
               в день.
             </p>
-            <h3 class="example__title">Затраты на питание: 15 000 РУБ.</h3>
+            <div class="example__result-wrapper">
+              <div class="example__result-wrapper-conteiner">
+                <div class="example__result">
+                  <div class="example__weight">5 кг</div>
+                  <div class="example__text">снижение веса</div>
+                </div>
+                <div class="example__result">
+                  <span class="example__days">60 дней</span>
+                  <span class="example__text">затрачено времени</span>
+                </div>
+              </div>
+              <h3 class="example__title">Затраты на питание: 15 000 РУБ.</h3>
+            </div>
           </div>
           <div class="example-slider">
             <img
@@ -192,19 +223,23 @@
             />
           </div>
         </div>
+        <div class="example__background"></div>
       </section>
     </main>
+    <div class="cooperation cooperation--backwhite">
+      <h3 class="cooperation__title">
+        Приглашаем<br />
+        к сотрудничеству<br />
+        дилеров!
+      </h3>
+      <p class="cooperation__subtitle">
+        ул. Большая<br />
+        Конюшенная, д. 19/8<br />
+        Санкт-Петербург
+      </p>
+    </div>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <div class="cooperation cooperation--backwhite">
-          <h3 class="cooperation__title">
-            Приглашаем к сотрудничеству дилеров!
-          </h3>
-          <p class="cooperation__subtitle">
-            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
-          </p>
-        </div>
-      </div>
+      <div class="page-footer__wrapper"></div>
       <div class="page-footer__map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616879214042!5m2!1sru!2sru"
@@ -225,7 +260,7 @@
         </div>
       </div>
       <div class="page-footer__social page-footer__wrapper">
-        <a
+        <a tabindex="0" aria-label="логотип"
           ><img
             class="page-footer__logo-image"
             src="img/logo2.svg"
