@@ -19,6 +19,22 @@
   }
 }
 
+.main-nav__item--current a {
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid @basic_green;
+  }
+
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid @basic_green;
+  }
+}
+
+.main-nav__item--white.main-nav__item--current a {
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid @basic_white;
+  }
+}
+
 .main-nav__item {
   text-transform: uppercase;
   text-decoration: none;
@@ -28,17 +44,11 @@
   line-height: 20px;
   text-align: center;
   padding-top: 24px;
-
-  &:not(:last-child) {
-    padding-bottom: 24px;
-    border-bottom: 1px solid @line-nav-grey;
-  }
+  padding-bottom: 24px;
+  border-bottom: 1px solid @line-nav-grey;
 
   @media (min-width: @tablet-width) {
-    &:not(:last-child) {
-      border: none;
-    }
-
+    border: none;
     .fonts();
     font-weight: 400;
     font-size: 18px;
@@ -90,14 +100,30 @@
 }
 
 .main-nav__toggle--close {
-  margin-bottom: 8px;
+  position: relative;
   border: none;
   background: none;
-  width: 18px;
-  height: 18px;
-  background-image: url("../img/menu-close.png");
-  background-size: cover;
-  vertical-align: middle;
+  outline: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: -9px;
+    width: 24px;
+    height: 1.5px;
+    background-color: @basic-black;
+    cursor: pointer;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -109,13 +135,14 @@
 }
 
 .main-nav__toggle--open {
+  content: "";
   border: none;
-  background: none;
-  width: 18px;
-  height: 18px;
-  background-image: url("../img/menu-open.png");
-  background-size: cover;
-  vertical-align: middle;
+  width: 24px;
+  height: 1.5px;
+  background-color: @basic-black;
+  box-shadow: 0 8px 0 0 @basic-black, 0 16px 0 0 @basic-black;
+  margin-bottom: 15px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -127,6 +154,7 @@
 }
 
 .page-header__logo {
+  width: 280px;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -10,6 +10,10 @@
   }
 }
 
+.main-form {
+  overflow: hidden;
+}
+
 .main-form__title {
   .fonts();
   font-weight: 400;
@@ -90,6 +94,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 0;
+  }
 }
 
 .main-form__item label {
@@ -98,13 +110,6 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
-    margin-right: 10px;
-  }
-}
-
-.main-form__item:last-child label {
-  @media (min-width: @tablet-width) {
-    min-width: 120px;
   }
 }
 
@@ -114,6 +119,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
+    min-width: 70px;
   }
 }
 
@@ -157,8 +163,14 @@
   padding: 0;
   border-bottom: 1px solid @special_grey-4;
 
-  @media (min-width: @tablet-width), (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     border: 1px solid @grey_border_input;
+    margin-right: 35px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+    max-height: 180px;
   }
 }
 
@@ -238,29 +250,19 @@
     content: "";
     position: absolute;
     top: 15px;
-    left: 190px;
-    width: 100;
+    margin-left: 35px;
+    width: 100vw;
     height: 2px;
     background-color: @basic_green;
   }
 
-  @media (min-width: @tablet-width), (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     &::before {
       content: "";
       position: absolute;
       top: 15px;
       right: 350px;
       width: 100vw;
-      height: 2px;
-      background-color: @basic_green;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 350px;
-      width: 100%;
       height: 2px;
       background-color: @basic_green;
     }
@@ -274,6 +276,11 @@
 
   @media (min-width: @tablet-width) {
     background: url("../img/icon_email.png") no-repeat center right;
+    background-position: 550px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 450px;
   }
 }
 
@@ -284,6 +291,11 @@
 
   @media (min-width: @tablet-width) {
     background: url("../img/icon_phone.png") no-repeat center right;
+    background-position: 540px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: 440px;
   }
 }
 
@@ -305,8 +317,8 @@
     content: "";
     position: absolute;
     top: 15px;
-    left: 150px;
-    width: 100%;
+    margin-left: 15px;
+    width: 100vw;
     height: 2px;
     background-color: @basic_green;
   }
@@ -318,16 +330,6 @@
       top: 15px;
       right: 130px;
       width: 100vw;
-      height: 2px;
-      background-color: @basic_green;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 130px;
-      width: 100%;
       height: 2px;
       background-color: @basic_green;
     }
@@ -347,8 +349,8 @@
     padding-top: 15px;
   }
 
-  @media (min-width: @tablet-width), (min-width: @desktop-width) {
-    width: 100%;
+  @media (min-width: @tablet-width) {
+    min-width: 631px;
     margin-right: 36px;
 
     &::placeholder {
@@ -356,6 +358,11 @@
       text-align: left;
       padding-top: 15px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 0;
+    width: 100%;
   }
 }
 
@@ -378,8 +385,8 @@
     content: "";
     position: absolute;
     top: 35px;
-    left: 170px;
-    width: 100%;
+    margin-left: 15px;
+    width: 100vw;
     height: 2px;
     background-color: @basic_green;
   }
@@ -391,16 +398,6 @@
       top: 35px;
       right: 150px;
       width: 100vw;
-      height: 2px;
-      background-color: @basic_green;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 35px;
-      left: 150px;
-      width: 100%;
       height: 2px;
       background-color: @basic_green;
     }
@@ -433,11 +430,13 @@
   @media (min-width: @tablet-width) {
     display: flex;
     padding-bottom: 70px;
+    align-items: center;
   }
 }
 
-.main-form__additionally .main-form__item:not(:last-child) {
+.main-form__additionally .main-form__item {
   margin-bottom: 13px;
+  position: relative;
 }
 
 .main-form__checkbox label::before {
@@ -450,15 +449,15 @@
   margin-right: 15px;
 }
 
-.main-form__additionally .main-form__item {
-  position: relative;
-}
-
 .main-form__checkbox input:checked + label::after {
   content: url("../img/checkbox_mark.png");
   position: absolute;
   left: 7px;
   top: 7px;
+
+  @media (min-width: @tablet-width) {
+    top: 0;
+  }
 }
 
 .main-form__button {
