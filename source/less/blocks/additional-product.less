@@ -9,15 +9,37 @@
     content: "";
     position: absolute;
     top: 15px;
-    left: 267px;
-    width: 100px;
+    margin-left: 15px;
+    width: 100vw;
     height: 2px;
     background-color: @basic_green;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      right: 720px;
+      width: 100vw;
+      height: 2px;
+      background-color: @basic_green;
+    }
   }
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     grid-column-end: 3;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      right: 1220px;
+      width: 100vw;
+      height: 2px;
+      background-color: @basic_green;
+    }
   }
 }
 
@@ -28,6 +50,12 @@
   line-height: 16px;
   text-transform: uppercase;
   width: 100%;
+
+  @media (min-width: @desktop-width) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional-product__list {
@@ -68,7 +96,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 896px;
+    min-width: 896px;
     max-height: 28px;
     display: flex;
     flex-direction: row;
@@ -83,21 +111,46 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  margin: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    text-align: end;
+  }
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+  }
 }
 
 .additional-product__subtitle {
   width: 125px;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    min-width: 120px;
+  }
 }
 
 .additional-product__subtitle-price {
   margin-left: 100px;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    min-width: 50px;
+  }
 }
 
 .additional-product {
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-rows: 1fr 2fr;
-    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+.catalog-image {
+  @media (min-width: @desktop-width) {
+    object-fit: fill;
+    object-position: right top;
   }
 }
