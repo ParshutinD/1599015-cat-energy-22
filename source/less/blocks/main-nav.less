@@ -16,11 +16,14 @@
   @media (min-width: @desktop-width) {
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 45px;
+    min-width: 478px;
   }
 }
 
 .main-nav__item--current a {
   @media (min-width: @tablet-width) {
+    padding-bottom: 5px;
     border-bottom: 2px solid @basic_green;
   }
 
@@ -43,9 +46,12 @@
   font-size: 20px;
   line-height: 20px;
   text-align: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 20px;
   border-bottom: 1px solid @line-nav-grey;
+
+  &:not(:first-child) {
+    padding-top: 24px;
+  }
 
   @media (min-width: @tablet-width) {
     border: none;
@@ -53,12 +59,16 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+    padding-top: 24px;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 0;
+
     &:not(:last-child) {
       margin-bottom: 20px;
       border-bottom: none;
+      padding-top: 24px;
     }
   }
 }
@@ -88,6 +98,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-top: 14px;
   }
 
   @media (min-width: @desktop-width) {
@@ -109,7 +120,8 @@
   &::after {
     content: "";
     position: absolute;
-    left: -9px;
+    left: 256px;
+    bottom: 55px;
     width: 24px;
     height: 1.5px;
     background-color: @basic-black;
@@ -153,43 +165,30 @@
   }
 }
 
-.page-header__logo {
-  width: 280px;
+.page-header__logo-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid @line-nav-grey;
-  padding: 12px 0 16px 0;
+  padding: 12px 0 11px 0;
 
   @media (min-width: @tablet-width) {
-    display: none;
+    border: none;
   }
 
   @media (min-width: @desktop-width) {
-    display: none;
+    padding-top: 50px;
   }
 }
 
-.page-header__logo-medium {
-  display: none;
-
+.page-header__logo {
   @media (min-width: @tablet-width) {
-    display: block;
+    width: 174px;
+    height: 51px;
   }
 
   @media (min-width: @desktop-width) {
-    display: none;
-  }
-}
-
-.page-header__logo-large {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: block;
+    width: 202px;
+    height: 59px;
   }
 }
