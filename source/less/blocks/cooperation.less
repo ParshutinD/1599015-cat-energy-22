@@ -5,16 +5,12 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    height: 201px;
+    min-height: 201px;
   }
 
   @media (min-width: @desktop-width) {
     display: none;
   }
-}
-
-.cooperation--backwhite {
-  background-color: @basic_white;
 }
 
 .cooperation__title {
@@ -30,6 +26,8 @@
     font-size: 20px;
     line-height: 21px;
     text-align: start;
+    padding-top: 0;
+    padding-left: 41px;
   }
 }
 
@@ -45,6 +43,12 @@
     font-size: 16px;
     line-height: 20px;
     text-align: end;
+    padding-bottom: 15px;
+    padding-right: 41px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: start;
   }
 }
 
@@ -59,7 +63,21 @@
     justify-content: space-around;
     align-items: center;
     position: absolute;
-    top: 120px;
-    left: 110px;
+    top: 95px;
+    left: 31%;
+    transform: translateX(-50%);
+  }
+}
+
+.cooperation-wrapper {
+  @media (min-width: @tablet-width) {
+    .wrapper-tablet();
+    background-color: @basic_white;
+  }
+}
+
+.cooperation--backwhite {
+  @media (min-width: @tablet-width) {
+    padding-top: 30px;
   }
 }
