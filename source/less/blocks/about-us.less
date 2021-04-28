@@ -34,24 +34,6 @@
   text-transform: uppercase;
   text-align: center;
 
-  @media (max-width: @mobile-width-only) {
-    &::after {
-      content: "";
-      height: 290px;
-      display: block;
-      background-image: url("../img/index-can-mobile1.png");
-      background-repeat: no-repeat;
-      background-position: 0 27px;
-      padding-bottom: 5px;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/index-can-mobile1@2x.png");
-        background-repeat: no-repeat;
-        background-size: 280px 270px;
-      }
-    }
-  }
-
   @media (min-width: @tablet-width) {
     .fonts();
     font-weight: 400;
@@ -108,21 +90,6 @@
     .wrapper-tablet();
   }
 
-  @media (min-width: @tablet-width) {
-    &::after {
-      content: "";
-      height: 609px;
-      display: block;
-      background: url("../img/index-can-tablet1.png") no-repeat;
-      background-position: -2px 1px;
-
-      @media (min-resolution: 2dppx) {
-        background: url("../img/index-can-tablet1@2x.png") no-repeat;
-        background-size: 709px 609px;
-      }
-    }
-  }
-
   @media (min-width: @desktop-width) {
     .wrapper-desktop();
     min-height: 585px;
@@ -130,19 +97,10 @@
     &::before {
       content: url("../img/Rectangle17.png");
       position: absolute;
-      bottom: 11px;
+      bottom: 20px;
       left: 718px;
       right: 0;
       z-index: 1;
-    }
-
-    &::after {
-      content: url("../img/index-can-desktop.png");
-      position: absolute;
-      bottom: -40px;
-      left: 555px;
-      z-index: 1;
-      background: none;
     }
   }
 }
@@ -150,17 +108,20 @@
 .about-us {
   display: flex;
   align-items: center;
+}
 
+.about-us__image {
   @media (min-width: @tablet-width) {
-    padding-bottom: 65px;
+    width: 709px;
+    height: 609px;
   }
-}
 
-.about-us__image-small {
-  padding-top: 12px;
-}
-
-.about-us__image-large {
-  width: 709px;
-  height: 609px;
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
+    z-index: 3;
+    position: absolute;
+    top: 50px;
+    left: 555px;
+  }
 }
