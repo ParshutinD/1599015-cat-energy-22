@@ -15,11 +15,17 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+  margin-bottom: 35px;
 
   @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 60px;
     line-height: 60px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 65px;
   }
 }
 
@@ -29,7 +35,7 @@
   font-size: 14px;
   line-height: 18px;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 
   @media (min-width: @tablet-width) {
     width: 247px;
@@ -67,25 +73,26 @@
   .about-work__item--nutrients::before {
     content: url("../img/icon_nutrients.png");
     vertical-align: middle;
-    margin-right: 15px;
+    margin-right: 20px;
   }
 
   .about-work__item--fast::before {
     content: url("../img/icon_fast.png");
     vertical-align: middle;
-    margin-right: 15px;
+    margin-right: 25px;
   }
 
   .about-work__item--change::before {
     content: url("../img/icon_change.png");
     vertical-align: middle;
-    margin-right: 15px;
+    margin-right: 25px;
   }
 
   .about-work__item--result::before {
     content: url("../img/icon_result.png");
     vertical-align: middle;
-    margin-right: 15px;
+    margin-right: 20px;
+    padding-bottom: 8px;
   }
 }
 
@@ -179,7 +186,6 @@
     content: url("../img/icon_fast-medium.png");
     vertical-align: middle;
     padding-bottom: 25px;
-    padding-left: 15px;
   }
 
   .about-work__item--change::before {
@@ -187,7 +193,6 @@
     vertical-align: middle;
     margin-right: 25px;
     padding-bottom: 25px;
-    padding-left: 20px;
     padding-top: 15px;
   }
 
@@ -196,7 +201,6 @@
     vertical-align: middle;
     padding-bottom: 25px;
     padding-top: 15px;
-    padding-left: 17px;
   }
 }
 
