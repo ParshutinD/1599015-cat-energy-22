@@ -98,9 +98,11 @@
   list-style: none;
   padding: 0;
   max-width: 0;
+  padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     padding-top: 35px;
+    padding-bottom: 55px;
   }
 }
 
@@ -115,6 +117,14 @@
   font-size: 16px;
   line-height: 20px;
 
+  &:hover {
+    background-color: @basic_green-2;
+  }
+
+  &:active {
+    color: @white-for-active;
+  }
+
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -125,7 +135,7 @@
   @media (min-width: @desktop-width) {
     padding: 10px 50px 10px 50px;
     width: 320px;
-    margin-right: 50px;
+    margin-right: 40px;
     align-self: center;
   }
 }
@@ -144,6 +154,10 @@
     border: 1px solid @special_grey;
     padding: 26px 38px 12px 38px;
     margin: 0;
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -183,11 +197,14 @@
 
   @media (min-width: @tablet-width) {
     min-width: 140px;
+    grid-column-start: 3;
+    padding-right: 45px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 50px;
     text-align: start;
+    grid-column-start: 2;
+    padding-right: 90px;
   }
 }
 
@@ -197,11 +214,14 @@
   @media (min-width: @tablet-width) {
     width: 44px;
     margin: 0;
+    grid-column-start: 4;
   }
 
   @media (min-width: @desktop-width) {
     width: 150px;
     text-align: end;
+    grid-column-start: 3;
+    padding-right: 70px;
   }
 }
 
@@ -210,13 +230,13 @@
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-    padding-bottom: 45px;
+    padding-bottom: 30px;
   }
 }
 
 .catalog-image__gift {
   padding-top: 40px;
-  padding-bottom: 15px;
+  padding-bottom: 0;
   background: url("../img/gift.png");
   background-size: 280px 289px;
   background-repeat: no-repeat;
@@ -229,7 +249,7 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 55px;
-    padding-bottom: 40px;
+    padding-bottom: 23px;
     width: 100%;
     height: 200px;
     background: url("../img/gift-tablet.png");
