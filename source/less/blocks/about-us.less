@@ -22,7 +22,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 }
 
@@ -54,6 +54,14 @@
   padding: 9px 73px 9px 73px;
   background-color: @basic_green;
   color: @basic_white;
+
+  &:hover {
+    background-color: @basic_green-2;
+  }
+
+  &:active {
+    color: @white-for-active;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 14px 26px;
@@ -108,12 +116,18 @@
 .about-us {
   display: flex;
   align-items: center;
+  padding-top: 3px;
 }
 
 .about-us__image {
+  padding-top: 10px;
+  padding-bottom: 8px;
+
   @media (min-width: @tablet-width) {
     width: 709px;
     height: 609px;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -121,7 +135,7 @@
     height: 499px;
     z-index: 3;
     position: absolute;
-    top: 50px;
+    top: 5px;
     left: 555px;
   }
 }
