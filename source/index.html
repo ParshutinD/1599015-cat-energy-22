@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/style.min.css" rel="stylesheet" />
     <link rel="icon" href="favicon.ico" />
     <link
       rel="apple-touch-icon"
@@ -46,7 +46,7 @@
             </picture>
           </a>
         </div>
-        <button class="main-nav__toggle--close" type="button">
+        <button class="main-nav__toggle main-nav__toggle--close" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <nav class="main-nav">
@@ -76,7 +76,7 @@
             <source
               media="(min-width: 1440px)"
               srcset="
-                img/index-can-desktop.webp   1x,
+                img/index-can-desktop.png    1x,
                 img/index-can-desktop@2x.png 2x
               "
             />
@@ -90,9 +90,10 @@
             <img
               class="about-us__image"
               src="img/index-can-mobile1.png"
-              srcset="img/index-can-mobile1@2x.png x2"
+              srcset="img/index-can-mobile1@2x.png 2x"
               width="280"
               height="270"
+              alt="Корм с курицей"
             />
           </picture>
           <a class="about-us__link" href="form.html">Подобрать программу</a>
@@ -186,7 +187,7 @@
                 />
                 <img
                   class="example-slider__image"
-                  src="img/cat-before.webp"
+                  src="img/cat-before.png"
                   srcset="img/cat-before@2x.png 2x"
                   width="311"
                   height="232"
@@ -248,18 +249,20 @@
           loading="lazy"
           class="page-footer__map"
         ></iframe>
-        <div class="cooperation-map">
-          <h3 class="cooperation__title">
-            Приглашаем<br />
-            к сотрудничеству<br />
-            дилеров!
-          </h3>
-          <div>
-            <p class="cooperation__subtitle">
-              ул. Большая<br />
-              Конюшенная, д. 19/8 <br />
-            </p>
-            <p class="cooperation__subtitle">Санкт-Петербург</p>
+        <div class="page-footer__wrapper">
+          <div class="cooperation-map">
+            <h3 class="cooperation__title">
+              Приглашаем<br />
+              к сотрудничеству<br />
+              дилеров!
+            </h3>
+            <div>
+              <p class="cooperation__subtitle">
+                ул. Большая<br />
+                Конюшенная, д. 19/8 <br />
+              </p>
+              <p class="cooperation__subtitle">Санкт-Петербург</p>
+            </div>
           </div>
         </div>
       </div>
@@ -311,5 +314,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

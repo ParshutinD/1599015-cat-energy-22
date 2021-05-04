@@ -157,6 +157,9 @@
 .main-nav__toggle--open {
   content: "";
   border: none;
+  position: absolute;
+  left: 256px;
+  bottom: 55px;
   width: 24px;
   height: 1.5px;
   background-color: @basic-black;
@@ -171,6 +174,10 @@
   @media (min-width: @desktop-width) {
     display: none;
   }
+}
+
+.main-nav__toggle {
+  position: relative;
 }
 
 .page-header__logo-wrapper {
