@@ -181,11 +181,15 @@ const build = gulp.series(
   copy,
   optimizeImages,
   gulp.parallel(
-    styles,
+    stylesmin,
     html,
     scripts,
     sprite,
     createWebp
+  ),
+  gulp.series(
+    server,
+    watcher,
   ),
 );
 
