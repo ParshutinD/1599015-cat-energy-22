@@ -137,6 +137,7 @@
   flex-direction: column;
   position: relative;
   z-index: 2;
+
   @media (min-width: @desktop-width) {
     position: absolute;
     top: -40px;
@@ -248,16 +249,19 @@
     position: absolute;
     top: 0;
     left: 195px;
-    box-shadow: 0 0 1px 13px @basic_white, 0 0 1px 14px @special_grey,
+    box-shadow: 0 0 1px 13px @basic_white,
+      0 0 1px 14px @special_grey,
       0 1px 20px @toggle-shadow-1;
 
     &:hover {
-      box-shadow: 0 0 1px 13px @basic_white, 0 0 1px 14px @special_grey,
+      box-shadow: 0 0 1px 13px @basic_white,
+        0 0 1px 14px @special_grey,
         0 1px 25px @toggle-shadow-1;
     }
 
     &:active {
-      box-shadow: 0 0 1px 13px @basic_white, 0 0 1px 14px @basic_green,
+      box-shadow: 0 0 1px 13px @basic_white,
+        0 0 1px 14px @basic_green,
         0 1px 21px @toggle-shadow-1;
     }
   }
