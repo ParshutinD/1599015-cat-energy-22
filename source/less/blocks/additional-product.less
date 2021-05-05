@@ -4,13 +4,15 @@
   font-size: 24px;
   line-height: 24px;
   position: relative;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  margin-bottom: 0;
 
   &::after {
     content: "";
     position: absolute;
-    top: 15px;
-    margin-left: 15px;
+    top: 22px;
+    margin-left: 20px;
     width: 100vw;
     height: 2px;
     background-color: @basic_green;
@@ -81,6 +83,7 @@
   text-transform: uppercase;
   width: 100%;
   margin: 0;
+  padding-top: 10px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -91,6 +94,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
+    padding: 0;
   }
 }
 
@@ -99,6 +103,8 @@
   padding: 0;
   max-width: 0;
   padding-bottom: 25px;
+  display: grid;
+  grid-template-rows: repeat(4 1fr);
 
   @media (min-width: @tablet-width) {
     padding-top: 35px;
@@ -134,8 +140,8 @@
 
   @media (min-width: @desktop-width) {
     padding: 10px 50px 10px 50px;
-    width: 320px;
-    margin-right: 40px;
+    width: 350px;
+
     align-self: center;
   }
 }
@@ -144,7 +150,7 @@
   width: 282px;
   height: 98px;
   border-top: 1px solid @special_grey-2;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
     width: 630px;
@@ -154,6 +160,7 @@
     border: 1px solid @special_grey;
     padding: 26px 38px 12px 38px;
     margin: 0;
+    padding-top: 30px;
 
     &:not(:last-child) {
       border-bottom: none;
@@ -170,6 +177,7 @@
     border-right: none;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 25px;
   }
 }
 
@@ -182,6 +190,7 @@
   line-height: 14px;
   margin-bottom: 25px;
   margin-top: 0;
+  padding-top: 10px;
 
   @media (min-width: @tablet-width) {
     text-align: end;
@@ -241,7 +250,7 @@
   background-size: 280px 289px;
   background-repeat: no-repeat;
   width: auto;
-  height: 289px;
+  height: 280px;
 
   @media (min-resolution: 2dppx) {
     background: url("../img/gift@2x.png");

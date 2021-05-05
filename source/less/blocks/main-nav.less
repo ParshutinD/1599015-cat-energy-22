@@ -21,6 +21,16 @@
   }
 }
 
+.main-nav--hidden {
+  @media (max-width:@tablet-width) {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+  }
+}
+
 .main-nav__item--current a {
   @media (min-width: @tablet-width) {
     padding-bottom: 5px;

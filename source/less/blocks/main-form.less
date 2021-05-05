@@ -30,6 +30,20 @@
   }
 }
 
+
+
+.main-form input:focus + .input__icon--phone,
+.main-form input:focus + .input__icon--email {
+  fill: @basic_green;
+
+}
+
+.main-form input:invalid + .input__icon--phone,
+.main-form input:invalid + .input__icon--email {
+  fill: @input-invalid;
+
+}
+
 .main-form__main-title {
   .fonts();
   font-weight: 400;
@@ -178,7 +192,7 @@
 }
 
 .main-form__item:nth-child(3) input {
-  min-width: 204px;
+  min-width: 150px;
 
   @media (min-width: @tablet-width) {
     max-width: 490px;
@@ -308,6 +322,14 @@
   }
 }
 
+.main-form__filter-item--radio input:hover + label::before {
+  border: 1px solid @special-grey-radio-button;
+}
+
+.main-form__filter-item--radio input:disabled + label {
+  opacity: 0.3;
+}
+
 .main-form__filter-item:not(:last-child) {
   margin-bottom: 10px;
 
@@ -372,6 +394,7 @@
 
 .main-form__contacts .main-form__item {
   margin-bottom: 10px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 30px;
@@ -453,33 +476,33 @@
   }
 }
 
-.main-form__email {
-  background: url("../img/icon_email.png") no-repeat center right;
-  background-position: 180px;
-  padding: 0;
+.input__icon--email {
+  width: 20px;
+  height: 25px;
+  position: absolute;
+  right: 10px;
 
   @media (min-width: @tablet-width) {
-    background: url("../img/icon_email.png") no-repeat center right;
-    background-position: 525px;
+    right: 55px;
   }
 
   @media (min-width: @desktop-width) {
-    background-position: 460px;
+    right: 20px;
   }
 }
 
-.main-form__tel {
-  background: url("../img/icon_phone.png") no-repeat center right;
-  background-position: 170px;
-  padding: 0;
+.input__icon--phone {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 5px;
 
   @media (min-width: @tablet-width) {
-    background: url("../img/icon_phone.png") no-repeat center right;
-    background-position: 496px;
+    right: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    background-position: 400px;
+    right: 15px;
   }
 }
 
@@ -738,6 +761,14 @@
     left: 20px;
     transform: translate(-50%, -50%);
   }
+}
+
+.main-form__checkbox input:hover + label::before {
+  border: 1px solid @special-grey-radio-button;
+}
+
+.main-form__checkbox input:disabled + label {
+  opacity: 0.3;
 }
 
 .main-form__button {

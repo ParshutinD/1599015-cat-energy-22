@@ -24,10 +24,17 @@
     min-width: 171px;
     font-weight: 400;
     font-size: 20px;
-    line-height: 21px;
+    line-height: 25px;
     text-align: start;
-    padding-top: 0;
-    padding-left: 41px;
+    padding-top: 12px;
+    padding-left: 40px;
+  }
+}
+
+.cooperation-map .cooperation__title {
+  @media (min-width: @desktop-width) {
+    padding-left: 40px;
+    padding-top: 15px;
   }
 }
 
@@ -44,13 +51,23 @@
     font-size: 16px;
     line-height: 20px;
     text-align: end;
-    padding-right: 41px;
+    padding-right: 45px;
     margin-bottom: 15px;
-    margin-top: 19px;
+    margin-top: 25px;
   }
 
   @media (min-width: @desktop-width) {
     text-align: start;
+  }
+}
+
+.cooperation-map .cooperation__subtitle {
+  @media (min-width: @desktop-width) {
+    padding-right: 35px;
+  }
+
+  &:first-child {
+    padding-top: 5px;
   }
 }
 
@@ -65,7 +82,7 @@
     justify-content: space-around;
     align-items: center;
     position: absolute;
-    top: 95px;
+    top: 100px;
   }
 }
 

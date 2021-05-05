@@ -137,7 +137,7 @@ exports.copy = copy;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'source'
     },
     cors: true,
     notify: false,
@@ -198,7 +198,7 @@ exports.default = gulp.series(
   copy,
   copyImages,
   gulp.parallel(
-    stylesmin,
+    styles,
     html,
     scripts,
     sprite,

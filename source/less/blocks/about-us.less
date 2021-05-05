@@ -81,11 +81,9 @@
 
 .about-us__wrapper {
   .wrapper-mobile();
-  background: url("../img/header-bg.png"), url("../img/header-bg1.png");
-  background-repeat: no-repeat;
-  background-size: 320px 302px;
   color: @basic_white;
   position: relative;
+  z-index: 1;
 
   @media (min-resolution: 2dppx) {
     background: url("../img/header-bg.png"), url("../img/header-bg1@2x.png");
@@ -107,7 +105,6 @@
       position: absolute;
       bottom: 20px;
       left: 718px;
-      right: 0;
       z-index: 1;
     }
   }
@@ -116,6 +113,16 @@
 .about-us {
   display: flex;
   align-items: center;
+  background: url("../img/header-bg.png"), url("../../img/header-bg1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 302px, 320px 302px;
+  background-position: center top, center top;
+  color: @basic_white;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
 }
 
 .about-us__image {

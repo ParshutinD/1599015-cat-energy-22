@@ -10,7 +10,7 @@
     font-weight: 400;
     font-size: 60px;
     line-height: 60px;
-    padding-top: 0;
+    padding-top: 10px;
   }
 }
 
@@ -45,9 +45,10 @@
   @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 30px;
     width: 174px;
     text-align: end;
+    margin-bottom: 85px;
   }
 
   @media (min-width: @desktop-width) {
@@ -75,7 +76,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 150px;
+    padding-top: 140px;
     padding-bottom: 60px;
     margin: 0;
   }
@@ -120,10 +121,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    object-position: 125px -50px;
     width: 700px;
     height: 645px;
-    z-index: 2;
   }
 }
 
@@ -138,6 +137,11 @@
   flex-direction: column;
   position: relative;
   z-index: 2;
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: -40px;
+    left: 710px;
+  }
 }
 
 .expample__range-controls {
@@ -224,30 +228,52 @@
     }
   }
 
+  .expample__scale-large:hover::after,
+  .expample__scale-large:hover::before {
+    border-bottom: 1px solid @special_grey;
+  }
+
+  .expample__scale-large:active::after,
+  .expample__scale-large:active::before {
+    border-bottom: none;
+  }
+
   .example__toggle {
     width: 8px;
     height: 8px;
     padding: 0;
     background-color: @basic_green;
-    border: 12px solid @basic_white;
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
-    top: -12px;
+    top: 0;
     left: 195px;
-    box-shadow: 0 1px 3px @toggle-shadow-1;
+    box-shadow: 0 0 1px 13px @basic_white, 0 0 1px 14px @special_grey,
+      0 1px 20px @toggle-shadow-1;
 
     &:hover {
-      box-shadow: 0 2px 4px @toggle-shadow-1;
+      box-shadow: 0 0 1px 13px @basic_white, 0 0 1px 14px @special_grey,
+        0 1px 25px @toggle-shadow-1;
+    }
+
+    &:active {
+      box-shadow: 0 0 1px 13px @basic_white, 0 0 1px 14px @basic_green,
+        0 1px 21px @toggle-shadow-1;
     }
   }
 }
 
 .expample__range-controls-large {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -10px;
+    left: 3px;
+  }
+
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: -90px;
-    left: 150px;
+    top: -35px;
+    left: 15px;
   }
 }
 
@@ -348,7 +374,7 @@
 .example__background {
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: 590px;
+    top: 597px;
     background-color: @special_grey-3;
     width: 100%;
     height: 462px;
@@ -356,7 +382,7 @@
 
   @media (min-width: @desktop-width) {
     height: 462px;
-    top: 145px;
+    top: 150px;
     z-index: 1;
   }
 }
