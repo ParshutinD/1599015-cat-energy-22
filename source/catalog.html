@@ -13,9 +13,9 @@
     <link rel="manifest" href="site.webmanifest" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="page-header">
-      <div class="main-nav__wrapper">
+      <div class="page-header__wrapper">
         <div class="page-header__logo-wrapper">
           <a href="index.html">
             <picture>
@@ -34,10 +34,10 @@
             </picture>
           </a>
         </div>
-        <button class="main-nav__toggle--close" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--nojs main-nav__toggle--closed">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="index.html">Главная</a>
@@ -60,6 +60,21 @@
             <a href="">
               <picture>
                 <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/catalog-1-tablet-chicken.webp    1x,
+                    img/catalog-1-tablet-chicken@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/catalog-1-chicken.webp    1x,
+                    img/catalog-1-chicken@2x.webp 2x
+                  "
+                />
+                <source
                   media="(min-width: 768px)"
                   srcset="
                     img/catalog-1-tablet-chicken.png    1x,
@@ -67,7 +82,7 @@
                   "
                 />
                 <img
-                  class="main-catalog__list-image--small"
+                  class="main-catalog__list-image-small"
                   src="img/catalog-1-chicken.png"
                   srcset="img/catalog-1-chicken@2x.png 2x"
                   width="68"
@@ -101,6 +116,21 @@
             <a href="">
               <picture>
                 <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/catalog-2-tablet-chicken.webp    1x,
+                    img/catalog-2-tablet-chicken@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/catalog-1-chicken-big.webp    1x,
+                    img/catalog-1-chicken-big@2x.webp 2x
+                  "
+                />
+                <source
                   media="(min-width: 768px)"
                   srcset="
                     img/catalog-2-tablet-chicken.png    1x,
@@ -108,11 +138,11 @@
                   "
                 />
                 <img
-                  class="main-catalog__list-image--big"
-                  src="img/catalog-1-chicken.png"
-                  srcset="img/catalog-1-chicken@2x.png 2x"
+                  class="main-catalog__list-image-big"
+                  src="img/catalog-1-chicken-big.png"
+                  srcset="img/catalog-1-chicken-big@2x.png 2x"
                   width="84"
-                  height="100"
+                  height="101"
                   alt="Корм с курицей"
                 />
               </picture>
@@ -142,6 +172,21 @@
             <a href="">
               <picture>
                 <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/catalog-1-tablet-fish.webp    1x,
+                    img/catalog-1-tablet-fish@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/catalog-1-fish.webp    1x,
+                    img/catalog-1-fish@2x.webp 2x
+                  "
+                />
+                <source
                   media="(min-width: 768px)"
                   srcset="
                     img/catalog-1-tablet-fish.png    1x,
@@ -149,11 +194,11 @@
                   "
                 />
                 <img
-                  class="main-catalog__list-image--small"
+                  class="main-catalog__list-image-small"
                   src="img/catalog-1-fish.png"
                   srcset="img/catalog-1-fish@2x.png 2x"
                   width="68"
-                  height="86"
+                  height="78"
                   alt="Корм с рыбой"
                 />
               </picture>
@@ -183,6 +228,21 @@
             <a href="">
               <picture>
                 <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/catalog-2-tablet-fish.webp    1x,
+                    img/catalog-2-tablet-fish@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/catalog-1-fish-big.webp    1x,
+                    img/catalog-1-fish-big@2x.webp 2x
+                  "
+                />
+                <source
                   media="(min-width: 768px)"
                   srcset="
                     img/catalog-2-tablet-fish.png    1x,
@@ -190,11 +250,11 @@
                   "
                 />
                 <img
-                  class="main-catalog__list-image--big"
-                  src="img/catalog-1-fish.png"
-                  srcset="img/catalog-1-fish@2x.png 2x"
+                  class="main-catalog__list-image-big"
+                  src="img/catalog-1-fish-big.png"
+                  srcset="img/catalog-1-fish-big@2x.png 2x"
                   width="84"
-                  height="100"
+                  height="101"
                   alt="Корм с рыбой"
                 />
               </picture>
@@ -224,6 +284,21 @@
             <a href="">
               <picture>
                 <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/catalog-1-tablet-buckwheat.webp    1x,
+                    img/catalog-1-tablet-buckwheat@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/catalog-1-buckwheat.webp    1x,
+                    img/catalog-1-buckwheat@2x.webp 2x
+                  "
+                />
+                <source
                   media="(min-width: 768px)"
                   srcset="
                     img/catalog-1-tablet-buckwheat.png    1x,
@@ -231,11 +306,11 @@
                   "
                 />
                 <img
-                  class="main-catalog__list-image--small"
+                  class="main-catalog__list-image-small"
                   src="img/catalog-1-buckwheat.png"
                   srcset="img/catalog-1-buckwheat@2x.png 2x"
                   width="68"
-                  height="86"
+                  height="78"
                   alt="Корм с гречкой"
                 />
               </picture>
@@ -265,6 +340,21 @@
             <a href="">
               <picture>
                 <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/catalog-2-tablet-buckwheat.webp    1x,
+                    img/catalog-2-tablet-buckwheat@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/catalog-1-buckwheat-big.webp    1x,
+                    img/catalog-1-buckwheat-big@2x.webp 2x
+                  "
+                />
+                <source
                   media="(min-width: 768px)"
                   srcset="
                     img/catalog-2-tablet-buckwheat.png    1x,
@@ -272,11 +362,11 @@
                   "
                 />
                 <img
-                  class="main-catalog__list-image--big"
-                  src="img/catalog-1-buckwheat.png"
-                  srcset="img/catalog-1-buckwheat@2x.png 2x"
+                  class="main-catalog__list-image-big"
+                  src="img/catalog-1-buckwheat-big.png"
+                  srcset="img/catalog-1-buckwheat-big@2x.png 2x"
                   width="84"
-                  height="100"
+                  height="101"
                   alt="Корм с гречкой"
                 />
               </picture>
@@ -306,6 +396,21 @@
             <a href="">
               <picture>
                 <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/catalog-1-tablet-rice.webp    1x,
+                    img/catalog-1-tablet-rice@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/catalog-1-tablet-rice.webp    1x,
+                    img/catalog-1-tablet-rice@2x.webp 2x
+                  "
+                />
+                <source
                   media="(min-width: 768px)"
                   srcset="
                     img/catalog-1-tablet-rice.png    1x,
@@ -313,11 +418,11 @@
                   "
                 />
                 <img
-                  class="main-catalog__list-image--small"
-                  src="img/catalog-1-rice.png"
+                  class="main-catalog__list-image-small"
+                  src="img/catalog-1-tablet-rice.png"
                   srcset="img/catalog-1-rice@2x.png 2x"
-                  width="68"
-                  height="86"
+                  width="72"
+                  height="84"
                   alt="Корм с рисом"
                 />
               </picture>
@@ -343,6 +448,7 @@
             </table>
             <a href="" class="main-catalog__button">Заказать</a>
           </li>
+
           <li class="main-catalog__still">
             <h3 class="main-catalog__still-title">
               Показать еще 100500 товаров
@@ -383,7 +489,16 @@
               <a href="" class="additional-product__button">Заказать</a>
             </li>
           </ul>
-          <div class="catalog-image__gift"></div>
+          <div class="main-catalog__image-gift">
+            <svg width="78" height="80" role="img" arial-label="gift">
+              <use xlink:href="img/sprite-icon.svg#gift"></use>
+            </svg>
+            <p class="main-catalog__image-gift__subtitle">
+              Закажите все<br />
+              и получите чехол для<br />
+              кота в подарок!
+            </p>
+          </div>
         </div>
       </div>
     </main>
@@ -416,17 +531,17 @@
         ></iframe>
         <div class="page-footer__wrapper">
           <div class="cooperation-map">
-            <h3 class="cooperation__title">
+            <h3 class="cooperation-map__title">
               Приглашаем<br />
               к сотрудничеству<br />
               дилеров!
             </h3>
             <div>
-              <p class="cooperation__subtitle">
+              <p class="cooperation-map__subtitle">
                 ул. Большая<br />
                 Конюшенная, д. 19/8 <br />
               </p>
-              <p class="cooperation__subtitle">Санкт-Петербург</p>
+              <p class="cooperation-map__subtitle">Санкт-Петербург</p>
             </div>
           </div>
         </div>
@@ -443,19 +558,19 @@
         <ul class="page-footer__list">
           <li class="page-footer__item page-footer__item--vk">
             <a href="https://vk.com/htmlacademy"
-              ><svg width="23" height="16">
+              ><svg width="23" height="16" role="img" aria-label="vk">
                 <use xlink:href="img/sprite-icon.svg#vk"></use></svg
             ></a>
           </li>
           <li class="page-footer__item page-footer__item--instagram">
             <a href="https://www.instagram.com/htmlacademy/"
-              ><svg width="16" height="16">
+              ><svg width="16" height="16" role="img" aria-label="instagram">
                 <use xlink:href="img/sprite-icon.svg#instagram"></use></svg
             ></a>
           </li>
           <li class="page-footer__item page-footer__item--facebook">
             <a href="https://www.facebook.com/htmlacademy"
-              ><svg width="22" height="22">
+              ><svg width="22" height="22" role="img" aria-label="facebook">
                 <use xlink:href="img/sprite-icon.svg#facebook"></use></svg
             ></a>
           </li>

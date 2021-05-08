@@ -25,9 +25,9 @@
     <link rel="manifest" href="site.webmanifest" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="page-header">
-      <div class="main-nav__wrapper">
+      <div class="page-header__wrapper">
         <div class="page-header__logo-wrapper">
           <a href="index.html">
             <picture>
@@ -46,10 +46,10 @@
             </picture>
           </a>
         </div>
-        <button class="main-nav__toggle--close" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--nojs main-nav__toggle--closed">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="index.html">Главная</a>
@@ -132,12 +132,13 @@
                   >E-mail:*</label
                 >
                 <input
+                class="error"
                   id="email"
                   type="email"
                   placeholder="kuklachev@gmail.com"
                   class="main-form__email"
                 />
-                <svg class="input__icon--email">
+                <svg class="main-form__icon-email">
                   <use xlink:href="img/sprite-icon.svg#email"></use>
                 </svg>
               </li>
@@ -151,7 +152,7 @@
                   placeholder="8 (960) 900-60-90"
                   class="main-form__tel"
                 />
-                <svg class="input__icon--phone">
+                <svg class="main-form__icon-phone">
                   <use xlink:href="img/sprite-icon.svg#phone"></use>
                 </svg>
               </li>
@@ -246,17 +247,17 @@
         ></iframe>
         <div class="page-footer__wrapper">
           <div class="cooperation-map">
-            <h3 class="cooperation__title">
+            <h3 class="cooperation-map__title">
               Приглашаем<br />
               к сотрудничеству<br />
               дилеров!
             </h3>
             <div>
-              <p class="cooperation__subtitle">
+              <p class="cooperation-map__subtitle">
                 ул. Большая<br />
                 Конюшенная, д. 19/8 <br />
               </p>
-              <p class="cooperation__subtitle">Санкт-Петербург</p>
+              <p class="cooperation-map__subtitle">Санкт-Петербург</p>
             </div>
           </div>
         </div>
@@ -273,19 +274,19 @@
         <ul class="page-footer__list">
           <li class="page-footer__item page-footer__item--vk">
             <a href="https://vk.com/htmlacademy"
-              ><svg width="23" height="16">
+              ><svg width="23" height="16" role="img" aria-label="vk">
                 <use xlink:href="img/sprite-icon.svg#vk"></use></svg
             ></a>
           </li>
           <li class="page-footer__item page-footer__item--instagram">
             <a href="https://www.instagram.com/htmlacademy/"
-              ><svg width="16" height="16">
+              ><svg width="16" height="16" role="img" aria-label="instagram">
                 <use xlink:href="img/sprite-icon.svg#instagram"></use></svg
             ></a>
           </li>
           <li class="page-footer__item page-footer__item--facebook">
             <a href="https://www.facebook.com/htmlacademy"
-              ><svg width="22" height="22">
+              ><svg width="22" height="22" role="img" aria-label="facebook">
                 <use xlink:href="img/sprite-icon.svg#facebook"></use></svg
             ></a>
           </li>

@@ -32,47 +32,45 @@
   padding: 0 60px 0 60px;
   margin-bottom: 0;
   align-items: center;
+  padding-top: 30px;
 
   @media (min-width: @tablet-width) {
     width: 129px;
     padding: 0;
     justify-content: space-between;
     margin-top: 0;
-    padding-top: 5px;
-    padding-left: 20px;
+    padding-top: 0;
+    padding-left: 29px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 15px;
+    padding-top: 0;
     padding-left: 50px;
   }
 }
 
-@media (min-width: @tablet-width) {
-  width: 129px;
-  padding: 0;
-  justify-content: space-between;
-  margin-top: 0;
-  padding-top: 5px;
-  padding-left: 20px;
-}
-
 .page-footer__item--vk svg {
-  width: 30px;
-  height: 22px;
-  fill: @special_grey-1;
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    height: 22px;
+    fill: @special_grey-1;
+  }
 }
 
 .page-footer__item--instagram svg {
-  width: 23px;
-  height: 23px;
-  fill: @special_grey-1;
+  @media (min-width: @tablet-width) {
+    width: 23px;
+    height: 23px;
+    fill: @special_grey-1;
+  }
 }
 
 .page-footer__item--facebook svg {
-  width: 28px;
-  height: 33px;
-  fill: @special_grey-1;
+  @media (min-width: @tablet-width) {
+    width: 28px;
+    height: 33px;
+    fill: @special_grey-1;
+  }
 }
 
 .page-footer__item svg {
@@ -100,7 +98,10 @@
 .page-footer__social a {
   align-self: center;
   padding-top: 25px;
-  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .page-footer {
@@ -108,7 +109,7 @@
 }
 
 .page-footer__logo-image {
-  padding-top: 15px;
+  padding-top: 14px;
 
   &:hover {
     opacity: 0.8;
@@ -120,11 +121,11 @@
 
   @media (min-width: @tablet-width) {
     padding: 0;
-    padding-top: 15px;
+    padding-top: px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 25px;
+    padding-top: 5px;
   }
 }
 
@@ -171,10 +172,17 @@
   @media (max-width: @mobile-width-only) {
     width: 281px;
     height: 34px;
+    padding-top: 15px;
+    padding-bottom: 16px;
   }
 
   @media (min-width: @tablet-width) {
-    padding-right: 0;
     width: 163px;
+    padding-top: 0;
+    padding-right: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 6px;
   }
 }

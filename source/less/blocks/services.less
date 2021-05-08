@@ -6,10 +6,11 @@
   padding-left: 20px;
   padding-right: 33px;
   height: 266px;
+  margin-top: 30px;
 
-  &:first-child {
+  &:last-child {
     margin-bottom: 20px;
-    margin-top: 27px;
+    margin-top: 20px;
   }
 
   @media (min-width: @tablet-width) {
@@ -18,6 +19,18 @@
 
     &:first-child {
       margin-bottom: 20px;
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:last-child {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    &:first-child {
+      margin-bottom: 0;
       margin-top: 0;
     }
   }
@@ -30,7 +43,7 @@
   line-height: 37px;
   text-transform: uppercase;
   margin: 0;
-  padding-top: 20px;
+  padding-top: 23px;
 
   @media (min-width: @tablet-width) {
     font-weight: 400;
@@ -41,7 +54,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 50px;
+    padding-top: 47px;
     padding-bottom: 35px;
     margin-left: 0;
   }
@@ -111,7 +124,8 @@
   }
 
   .services__subtitle--pro {
-    margin-left: 35px;
+    margin-left: 30px;
+    padding-bottom: 35px;
   }
 
   .services__subtitle {
@@ -130,7 +144,7 @@
 
   &::after {
     content: url("../img/icon_arrow.png");
-    padding-left: 28px;
+    padding-left: 16px;
   }
 
   &:hover {
@@ -153,14 +167,20 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
+
+    &::after {
+      content: url("../img/icon_arrow.png");
+      padding-left: 30px;
+    }
   }
 }
 
 @media (max-width: @mobile-width-only) {
   .services__title--slim::before {
     content: url("../img/cat_slim.svg");
-    margin-right: 25px;
+    margin-right: 22px;
     vertical-align: middle;
   }
 }
@@ -178,14 +198,14 @@
     content: url("../img/cat_slim-middle.svg");
     vertical-align: middle;
     margin-right: 65px;
-    margin-left: 25px;
+    margin-left: 30px;
   }
 
   .services__title--pro::before {
     content: url("../img/cat_pro-middle.svg");
     vertical-align: middle;
-    margin-right: 30px;
-    margin-left: 20px;
+    margin-right: 45px;
+    margin-left: 10px;
   }
 }
 
@@ -212,6 +232,6 @@
 
 .services {
   @media (min-width: @desktop-width) {
-    padding-top: 55px;
+    padding-top: 60px;
   }
 }

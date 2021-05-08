@@ -5,6 +5,7 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link href="./css/style.css" rel="stylesheet" />
     <link rel="icon" href="favicon.ico" />
+
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -25,9 +26,9 @@
     <link rel="manifest" href="site.webmanifest" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
   </head>
-  <body class="page__body">
+  <body class="page-body">
     <header class="page-header">
-      <div class="main-nav__wrapper">
+      <div class="page-header__wrapper">
         <div class="page-header__logo-wrapper">
           <a>
             <picture>
@@ -46,10 +47,10 @@
             </picture>
           </a>
         </div>
-        <button class="main-nav__toggle main-nav__toggle--close" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--nojs main-nav__toggle--closed">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
           <ul class="main-nav__list">
             <li
               class="main-nav__item main-nav__item--current main-nav__item--white"
@@ -73,6 +74,29 @@
           <h2 class="about-us__title">Функциональное питание для котов</h2>
           <p class="about-us__subtitle">Занялся собой? Займись котом!</p>
           <picture>
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              srcset="
+                img/index-can-desktop.webp    1x,
+                img/index-can-desktop@2x.webp 2x
+              "
+            />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="
+                img/index-can-tablet1.webp    1x,
+                img/index-can-tablet1@2x.webp 2x
+              "
+            />
+            <source
+              type="image/webp"
+              srcset="
+                img/index-can-mobile1.webp    1x,
+                img/index-can-mobile1@2x.webp 2x
+              "
+            />
             <source
               media="(min-width: 1440px)"
               srcset="
@@ -172,6 +196,26 @@
             <p class="example-slider__image-wrapper">
               <picture>
                 <source
+                  type="image/webp"
+                  media="(min-width: 1440px)"
+                  srcset="
+                    img/image_cat_desktop.webp    1x,
+                    img/image_cat_desktop@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/image_cat_tablet.webp    1x,
+                    img/image_cat_tablet@2x.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  srcset="img/cat-before.webp 1x, img/cat-before@2x.webp 2x"
+                />
+                <source
                   media="(min-width: 1440px)"
                   srcset="
                     img/image_cat_desktop.png    1x,
@@ -195,46 +239,34 @@
                 />
               </picture>
             </p>
-            <div class="expample__range-controls">
-              <div class="expample__scale">
-                <div class="example__bar"></div>
+            <div class="example-slider__range-controls">
+              <div class="example-slider__scale">
+                <div class="example-slider__bar"></div>
               </div>
             </div>
-            <div class="expample__range-controls-large">
-              <div class="expample__scale-large">
-                <div class="example__toggle"></div>
+            <div class="example-slider__range-controls-large">
+              <div class="example-slider__scale-large">
+                <div class="example-slider__toggle"></div>
               </div>
             </div>
-            <label class="visually-hidden" for="before-after"
-              >Полоса прокрутки</label
-            >
-            <input
-              class="visually-hidden example-slider__range"
-              type="range"
-              id="before-after"
-              min="0"
-              max="10"
-            />
           </div>
         </div>
         <div class="example__background"></div>
       </section>
     </main>
-    <div class="page-footer__wrapper">
-      <div class="cooperation-wrapper">
-        <div class="cooperation cooperation--backwhite">
-          <h3 class="cooperation__title">
-            Приглашаем<br />
-            к сотрудничеству<br />
-            дилеров!
-          </h3>
-          <div>
-            <p class="cooperation__subtitle">
-              ул. Большая<br />
-              Конюшенная, д. 19/8 <br />
-            </p>
-            <p class="cooperation__subtitle">Санкт-Петербург</p>
-          </div>
+    <div class="cooperation-wrapper">
+      <div class="cooperation cooperation--backwhite">
+        <h3 class="cooperation__title">
+          Приглашаем<br />
+          к сотрудничеству<br />
+          дилеров!
+        </h3>
+        <div>
+          <p class="cooperation__subtitle">
+            ул. Большая<br />
+            Конюшенная, д. 19/8 <br />
+          </p>
+          <p class="cooperation__subtitle">Санкт-Петербург</p>
         </div>
       </div>
     </div>
@@ -252,17 +284,17 @@
         ></iframe>
         <div class="page-footer__wrapper">
           <div class="cooperation-map">
-            <h3 class="cooperation__title">
+            <h3 class="cooperation-map__title">
               Приглашаем<br />
               к сотрудничеству<br />
               дилеров!
             </h3>
             <div>
-              <p class="cooperation__subtitle">
+              <p class="cooperation-map__subtitle">
                 ул. Большая<br />
                 Конюшенная, д. 19/8 <br />
               </p>
-              <p class="cooperation__subtitle">Санкт-Петербург</p>
+              <p class="cooperation-map__subtitle">Санкт-Петербург</p>
             </div>
           </div>
         </div>
@@ -279,19 +311,19 @@
         <ul class="page-footer__list">
           <li class="page-footer__item page-footer__item--vk">
             <a href="https://vk.com/htmlacademy"
-              ><svg width="23" height="16">
+              ><svg width="23" height="16" role="img" aria-label="vk">
                 <use xlink:href="img/sprite-icon.svg#vk"></use></svg
             ></a>
           </li>
           <li class="page-footer__item page-footer__item--instagram">
             <a href="https://www.instagram.com/htmlacademy/"
-              ><svg width="16" height="16">
+              ><svg width="16" height="16" role="img" aria-label="instagram">
                 <use xlink:href="img/sprite-icon.svg#instagram"></use></svg
             ></a>
           </li>
           <li class="page-footer__item page-footer__item--facebook">
             <a href="https://www.facebook.com/htmlacademy"
-              ><svg width="22" height="22">
+              ><svg width="22" height="22" role="img" aria-label="facebook">
                 <use xlink:href="img/sprite-icon.svg#facebook"></use></svg
             ></a>
           </li>

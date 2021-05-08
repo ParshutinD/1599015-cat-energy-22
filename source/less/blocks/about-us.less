@@ -5,7 +5,7 @@
   line-height: 36px;
   text-align: center;
   margin: 0;
-  padding-top: 30px;
+  padding-top: 26px;
   padding-bottom: 12px;
 
   @media (min-width: @tablet-width) {
@@ -22,7 +22,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 40px;
+    margin-top: 45px;
+    margin-left: 80px;
   }
 }
 
@@ -42,6 +43,11 @@
     color: @basic-black;
     text-align: start;
     margin-left: 88px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+    margin-bottom: 0;
   }
 }
 
@@ -74,8 +80,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 83px;
-    top: 335px;
+    margin-left: 81px;
+    top: 330px;
   }
 }
 
@@ -102,9 +108,11 @@
 
     &::before {
       content: url("../img/Rectangle17.png");
+      background-size: cover;
+      width: 100vw;
       position: absolute;
-      bottom: 20px;
-      left: 718px;
+      bottom: 16px;
+      left: 721px;
       z-index: 1;
     }
   }
@@ -113,7 +121,7 @@
 .about-us {
   display: flex;
   align-items: center;
-  background: url("../img/header-bg.png"), url("../../img/header-bg1.png");
+  background: url("../img/header-bg.png"), url("../img/header-bg1.png");
   background-repeat: no-repeat;
   background-size: 100% 302px, 320px 302px;
   background-position: center top, center top;
@@ -126,8 +134,8 @@
 }
 
 .about-us__image {
-  padding-top: 10px;
-  padding-bottom: 8px;
+  padding-top: 15px;
+  padding-bottom: 5px;
 
   @media (min-width: @tablet-width) {
     width: 709px;
@@ -141,7 +149,7 @@
     height: 499px;
     z-index: 3;
     position: absolute;
-    top: 5px;
-    left: 555px;
+    top: 11px;
+    left: 559px;
   }
 }
