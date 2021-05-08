@@ -3,8 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Кэт энерджи</title>
-    <link href="./css/style.min.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
     <link rel="icon" href="favicon.ico" />
+    <link
+      crossorigin
+      rel="preload"
+      href="/source/fonts/oswaldregular.woff2"
+      as="font"
+    />
+    <link
+      crossorigin
+      rel="preload"
+      href="/source/fonts/oswaldregular.woff"
+      as="font"
+    />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -34,7 +46,7 @@
             </picture>
           </a>
         </div>
-        <nav class="main-nav main-nav--nojs main-nav__toggle--closed">
+        <nav class="main-nav main-nav--nojs main-nav--closed">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -490,7 +502,7 @@
             </li>
           </ul>
           <div class="main-catalog__image-gift">
-            <svg width="78" height="80" role="img" arial-label="gift">
+            <svg width="78" height="80">
               <use xlink:href="img/sprite-icon.svg#gift"></use>
             </svg>
             <p class="main-catalog__image-gift__subtitle">

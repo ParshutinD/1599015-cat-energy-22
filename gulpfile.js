@@ -25,7 +25,7 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -41,7 +41,7 @@ const stylesmin = () => {
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(sync.stream());
 }
 
@@ -63,7 +63,7 @@ const scripts = () => {
   return gulp.src("source/js/script.js")
   .pipe(terser())
   .pipe(rename("script.min.js"))
-  .pipe(gulp.dest("source/js"))
+  .pipe(gulp.dest("build/js"))
   .pipe(sync.stream());
 }
 
@@ -96,7 +96,7 @@ exports.images = copyImages;
 const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("source/img"));
+  .pipe(gulp.dest("build/img"));
 }
 
 exports.createWebp = createWebp;
@@ -109,7 +109,7 @@ const sprite = () => {
     inLineSvg: true
   }))
   .pipe(rename("sprite.svg"))
-  .pipe (gulp.dest("source/img"));
+  .pipe (gulp.dest("build/img"));
 }
 
 exports.sprite = sprite;
@@ -137,7 +137,7 @@ exports.copy = copy;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,

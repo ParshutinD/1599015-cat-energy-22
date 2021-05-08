@@ -107,13 +107,16 @@
     min-height: 585px;
 
     &::before {
-      content: url("../img/Rectangle17.png");
-      background-size: cover;
-      width: 100vw;
+      content: "";
       position: absolute;
-      bottom: 16px;
-      left: 721px;
       z-index: 1;
+      width: 50vw;
+      background: url("../img/Rectangle17.png") center center no-repeat
+        @basic_green;
+      height: 100%;
+      top: -130px;
+      right: calc((100vw - 100%) / 2);
+      background-size: cover;
     }
   }
 }
