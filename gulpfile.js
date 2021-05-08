@@ -41,7 +41,7 @@ const stylesmin = () => {
     ]))
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
 }
 
@@ -63,7 +63,7 @@ const scripts = () => {
   return gulp.src("source/js/script.js")
   .pipe(terser())
   .pipe(rename("script.min.js"))
-  .pipe(gulp.dest("build/js"))
+  .pipe(gulp.dest("source/js"))
   .pipe(sync.stream());
 }
 
@@ -96,7 +96,7 @@ exports.images = copyImages;
 const createWebp = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}")
   .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("build/img"));
+  .pipe(gulp.dest("source/img"));
 }
 
 exports.createWebp = createWebp;
@@ -109,7 +109,7 @@ const sprite = () => {
     inLineSvg: true
   }))
   .pipe(rename("sprite.svg"))
-  .pipe (gulp.dest("build/img"));
+  .pipe (gulp.dest("source/img"));
 }
 
 exports.sprite = sprite;
@@ -198,7 +198,7 @@ exports.default = gulp.series(
   copy,
   copyImages,
   gulp.parallel(
-    styles,
+    stylesmin,
     html,
     scripts,
     sprite,
