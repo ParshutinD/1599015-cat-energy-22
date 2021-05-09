@@ -179,38 +179,44 @@
 }
 
 .main-form__item:nth-child(1) input {
-  min-width: 215px;
+  min-width: 210px;
+  padding-left: 15px;
 
   @media (min-width: @tablet-width) {
-    max-width: 560px;
+    max-width: 545px;
+    padding-left: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 500px;
+    max-width: 480px;
   }
 }
 
 .main-form__item:nth-child(2) input {
-  min-width: 200px;
+  min-width: 191px;
+  padding-left: 10px;
 
   @media (min-width: @tablet-width) {
-    max-width: 532px;
+    max-width: 515px;
+    padding-left: 18px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 470px;
+    max-width: 450px;
   }
 }
 
 .main-form__item:nth-child(3) input {
-  min-width: 150px;
+  min-width: 160px;
+  padding-left: 10px;
 
   @media (min-width: @tablet-width) {
-    max-width: 490px;
+    max-width: 475px;
+    padding-left: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 430px;
+    max-width: 410px;
   }
 }
 
@@ -237,6 +243,13 @@
 .main-form__item input {
   border: 1px solid @grey_border_input;
   height: 45px;
+  color: @special_dark-grey;
+  text-transform: uppercase;
+  .fonts();
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  padding-left: 6px;
 
   &::placeholder {
     color: @special_dark-grey;
@@ -245,7 +258,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
-    padding-left: 15px;
   }
 
   &::-moz-placeholder {
@@ -260,6 +272,13 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
+    color: @special_dark-grey;
+    text-transform: uppercase;
+    .fonts();
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 8px;
 
     &::placeholder {
       color: @special_dark-grey;
@@ -268,7 +287,6 @@
       font-weight: 400;
       font-size: 20px;
       line-height: 30px;
-      padding-left: 18px;
     }
 
     &::-moz-placeholder {
@@ -574,7 +592,7 @@
   position: relative;
   margin: 0;
   padding: 0;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 
   &::after {
     content: "";
@@ -641,18 +659,22 @@
 }
 
 .main-form__comment .main-form__item {
-  width: 280px;
-  height: 150px;
+  width: 255px;
+  height: 135px;
   border-color: @grey_border_input;
   resize: none;
   margin: 0;
-  padding: 0;
+  .fonts();
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  padding-top: 15px;
+  padding-left: 15px;
 
   &::placeholder {
     .fonts();
     color: @special_dark-grey;
     text-align: center;
-    padding-top: 15px;
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
@@ -669,20 +691,26 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-width: 631px;
-    min-height: 174px;
-    padding-right: 0;
+    min-width: 610px;
+    min-height: 150px;
     margin-top: 45px;
     margin-left: 35px;
+    .fonts();
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-left: 20px;
 
     &::placeholder {
       color: @special_dark-grey;
       text-align: left;
-      padding-top: 10px;
-      padding-left: 23px;
       font-weight: 400;
       font-size: 20px;
       line-height: 30px;
+      padding-top: 0;
+      padding-left: 0;
     }
 
     &::-moz-placeholder {
@@ -698,14 +726,16 @@
 
   @media (min-width: @desktop-width) {
     margin-right: 0;
-    width: 100%;
+    width: 1200px;
     margin-left: 0;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
 
     &::placeholder {
       color: @special_dark-grey;
       text-align: left;
-      padding-top: 13px;
-      padding-left: 18px;
+
       font-weight: 400;
       font-size: 20px;
       line-height: 30px;
@@ -736,7 +766,7 @@
   margin: 0;
   padding: 0;
   margin-bottom: 18px;
-  padding-top: 30px;
+  padding-top: 25px;
 
   &::after {
     content: "";
@@ -752,13 +782,14 @@
     font-weight: 400;
     font-size: 36px;
     line-height: 36px;
-    padding-top: 60px;
+    padding-top: 70px;
     padding-left: 41px;
+    margin-bottom: 12px;
 
     &::before {
       content: "";
       position: absolute;
-      top: 83px;
+      top: 93px;
       right: 250px;
       width: 100vw;
       height: 2px;
@@ -768,7 +799,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 83px;
+      top: 93px;
       margin-left: 40px;
       width: 100vw;
       height: 2px;
@@ -778,12 +809,13 @@
 
   @media (min-width: @desktop-width) {
     padding-left: 0;
-    padding-top: 68px;
+    padding-top: 75px;
+    margin-bottom: 17px;
 
     &::before {
       content: "";
       position: absolute;
-      top: 90px;
+      top: 98px;
       right: 251px;
       width: 100vw;
       height: 2px;
@@ -793,7 +825,7 @@
     &::after {
       content: "";
       position: absolute;
-      top: 91px;
+      top: 98px;
       margin-left: 41px;
       width: 100vw;
       height: 2px;

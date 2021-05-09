@@ -12,12 +12,6 @@
       as="font"
     />
     <link
-      crossorigin
-      rel="preload"
-      href="/source/fonts/oswaldregular.woff"
-      as="font"
-    />
-    <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="img/favicon//apple-touch-icon.png"
@@ -59,9 +53,11 @@
           </a>
         </div>
         <nav class="main-nav main-nav--nojs main-nav--closed">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
+          <button
+            class="main-nav__toggle"
+            type="button"
+            aria-label="Открыть меню"
+          ></button>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="index.html">Главная</a>
@@ -297,21 +293,23 @@
             alt="Кэт энерджи"
         /></a>
         <ul class="page-footer__list">
-          <li class="page-footer__item page-footer__item--vk">
+          <li class="page-footer__item page-footer__item--vk" aria-label="vk">
             <a href="https://vk.com/htmlacademy"
-              ><svg width="23" height="16" role="img" aria-label="vk">
+              ><svg width="23" height="16" role="img">
                 <use xlink:href="img/sprite-icon.svg#vk"></use></svg
             ></a>
           </li>
           <li class="page-footer__item page-footer__item--instagram">
-            <a href="https://www.instagram.com/htmlacademy/"
-              ><svg width="16" height="16" role="img" aria-label="instagram">
+            <a
+              href="https://www.instagram.com/htmlacademy/"
+              aria-label="instagram"
+              ><svg width="16" height="16" role="img">
                 <use xlink:href="img/sprite-icon.svg#instagram"></use></svg
             ></a>
           </li>
           <li class="page-footer__item page-footer__item--facebook">
-            <a href="https://www.facebook.com/htmlacademy"
-              ><svg width="22" height="22" role="img" aria-label="facebook">
+            <a href="https://www.facebook.com/htmlacademy" aria-label="facebook"
+              ><svg width="22" height="22" role="img">
                 <use xlink:href="img/sprite-icon.svg#facebook"></use></svg
             ></a>
           </li>
@@ -319,11 +317,11 @@
         <a
           href="https://htmlacademy.ru/intensive/adaptive"
           class="page-footer__social-academy-wrapper"
+          aria-label="html academy"
         >
           <svg
             class="page-footer__logo-htmlacademy"
             role="img"
-            aria-label="html academy"
             width="163"
             height="34"
             viewBox="0 0 100% 34"

@@ -150,6 +150,16 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .about-work__item--nutrients {
+    padding-top: 5px;
+  }
+
+  .about-work__item--fast {
+    padding-top: 5px;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .about-work__item--nutrients::before {
     content: url("../img/icon_nutrients-medium.png");
@@ -181,28 +191,32 @@
   .about-work__item--nutrients::before {
     content: url("../img/icon_nutrients-medium.png");
     vertical-align: middle;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
+    padding-top: 0;
   }
 
   .about-work__item--fast::before {
     content: url("../img/icon_fast-medium.png");
     vertical-align: middle;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
+    padding-top: 0;
+    margin-left: 3px;
   }
 
   .about-work__item--change::before {
     content: url("../img/icon_change-medium.png");
     vertical-align: middle;
-    margin-right: 25px;
     padding-bottom: 25px;
-    padding-top: 15px;
+    padding-top: 5px;
+    margin-left: 5px;
   }
 
   .about-work__item--result::before {
     content: url("../img/icon_result-medium.png");
     vertical-align: middle;
     padding-bottom: 25px;
-    padding-top: 15px;
+    padding-top: 5px;
+    margin-left: 5px;
   }
 }
 

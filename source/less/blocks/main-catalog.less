@@ -80,7 +80,7 @@
   @media (min-width: @tablet-width) {
     background: @basic_grey;
     width: 324px;
-    height: 430px;
+
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -153,13 +153,13 @@
   }
 }
 
-.main-catalog__item:focus-within .main-catalog__list-image-small,
-.main-catalog__item:focus-within .main-catalog__list-image-big {
-  outline: solid @basic-black;
+.main-catalog__list-image:focus img {
+  opacity: 0.5;
 }
 
 .main-catalog__button {
-  height: 20px;
+  min-height: 20px;
+  display: block;
   padding: 10px 109px 10px 109px;
   background-color: @basic_green;
   color: @basic_white;
@@ -168,6 +168,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  max-width: 280px;
 
   &:hover {
     background-color: @basic_green-2;
@@ -180,10 +181,13 @@
   @media (min-width: @tablet-width) {
     padding: 9px 93px;
     margin-bottom: 25px;
+    min-height: 20px;
+    max-width: 248px;
   }
 
   @media (min-width: @desktop-width) {
     padding: 10px 53px;
+    max-width: 168px;
   }
 }
 
@@ -195,6 +199,13 @@
   text-transform: uppercase;
   color: @special_dark-grey-2;
   align-self: flex-start;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    min-width: 185px;
+  }
 }
 
 .main-catalog__table-title {
@@ -206,7 +217,8 @@
   margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
-    max-width: 125px;
+    .fonts();
+    max-width: 155px;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
