@@ -41,7 +41,7 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <div class="page-header__logo-wrapper">
-          <a href="index.html">
+          <a href="index.html" tabindex="0" aria-label="логотип">
             <picture>
               <source
                 media="(min-width: 1440px)"
@@ -49,6 +49,7 @@
               />
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
               <img
+                
                 class="page-header__logo"
                 src="img/logo-mobile.svg"
                 width="190"
@@ -92,11 +93,23 @@
             <ul class="main-form__list">
               <li class="main-form__item">
                 <label for="cat-name">Имя:*</label>
-                <input id="cat-name" type="text" placeholder="Барсик" />
+                <input
+                  required
+                  class="main-form__name"
+                  id="cat-name"
+                  type="text"
+                  placeholder="Барсик"
+                />
               </li>
               <li class="main-form__item">
                 <label for="weight">Вес(КГ):*</label>
-                <input id="weight" type="number" placeholder="7" />
+                <input
+                  required
+                  class="main-form__weight"
+                  id="weight"
+                  type="number"
+                  placeholder="7"
+                />
               </li>
               <li class="main-form__item">
                 <label for="years">Возраст (лет):</label>
@@ -144,6 +157,7 @@
                   >E-mail:*</label
                 >
                 <input
+                  required
                   id="email"
                   type="email"
                   placeholder="kuklachev@gmail.com"
@@ -158,6 +172,7 @@
                   >Телефон:*</label
                 >
                 <input
+                  required
                   id="telephone"
                   type="tel"
                   placeholder="8 (960) 900-60-90"
@@ -274,7 +289,7 @@
         </div>
       </div>
       <div class="page-footer__social page-footer__wrapper">
-        <a
+        <a tabindex="0" aria-label="логотип"
           ><img
             class="page-footer__logo-image"
             src="img/logo2.svg"

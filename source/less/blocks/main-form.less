@@ -15,8 +15,6 @@
 }
 
 .main-form input {
-  border-color: black;
-
   &:hover {
     border-color: @special_grey;
   }
@@ -25,9 +23,6 @@
     border-color: @special_dark-grey;
   }
 
-   &:invalid {
-    border-color: @input-invalid;
-  }
 }
 
 .main-form input:focus + .main-form__icon-phone,
@@ -35,9 +30,13 @@
   fill: @basic_green;
 }
 
-.main-form input:invalid + .main-form__icon-phone,
-.main-form input:invalid + .main-form__icon-email {
+.error + .main-form__icon-phone,
+.error + .main-form__icon-email {
   fill: @input-invalid;
+}
+
+.main-form .error {
+  border-color: @input-invalid;
 }
 
 .main-form input:focus,
@@ -963,3 +962,4 @@
     padding-top: 15px;
   }
 }
+

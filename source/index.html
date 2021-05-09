@@ -42,7 +42,7 @@
     <header class="page-header">
       <div class="page-header__wrapper">
         <div class="page-header__logo-wrapper">
-          <a>
+          <a tabindex="0" aria-label="логотип">
             <picture>
               <source
                 media="(min-width: 1440px)"
@@ -50,6 +50,7 @@
               />
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
               <img
+
                 class="page-header__logo"
                 src="img/logo-mobile.svg"
                 width="190"
@@ -258,7 +259,7 @@
             </div>
             <div class="example-slider__range-controls-large">
               <div class="example-slider__scale-large">
-                <div class="example-slider__toggle"></div>
+                <div tabindex="0" class="example-slider__toggle"></div>
               </div>
             </div>
           </div>
