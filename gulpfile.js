@@ -31,8 +31,10 @@ const styles = () => {
   .pipe(rename("style.min.css"))
   .pipe(gulp.dest("build/css"))
   .pipe(sync.stream());
- }
- exports.styles = styles;
+  }
+
+
+  exports.styles = styles;
 
 // HTML
 
