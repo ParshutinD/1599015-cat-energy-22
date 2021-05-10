@@ -5,7 +5,7 @@
   line-height: 36px;
   text-align: center;
   margin: 0;
-  padding-top: 30px;
+  padding-top: 26px;
   padding-bottom: 12px;
 
   @media (min-width: @tablet-width) {
@@ -22,7 +22,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 40px;
+    margin-top: 45px;
+    margin-left: 80px;
   }
 }
 
@@ -42,6 +43,11 @@
     color: @basic-black;
     text-align: start;
     margin-left: 88px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
+    margin-bottom: 0;
   }
 }
 
@@ -71,21 +77,20 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 20px;
+    max-width: 244px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 83px;
-    top: 335px;
+    margin-left: 81px;
+    top: 330px;
   }
 }
 
 .about-us__wrapper {
   .wrapper-mobile();
-  background: url("../img/header-bg.png"), url("../img/header-bg1.png");
-  background-repeat: no-repeat;
-  background-size: 320px 302px;
   color: @basic_white;
   position: relative;
+  z-index: 1;
 
   @media (min-resolution: 2dppx) {
     background: url("../img/header-bg.png"), url("../img/header-bg1@2x.png");
@@ -103,12 +108,22 @@
     min-height: 585px;
 
     &::before {
-      content: url("../img/Rectangle17.png");
+      content: "";
       position: absolute;
-      bottom: 20px;
-      left: 718px;
-      right: 0;
       z-index: 1;
+      width: 50vw;
+      background: url("../img/Rectangle17.png") center center no-repeat
+        @basic_green;
+      height: 696px;
+      top: -130px;
+      right: calc((100vw - 100%) / -2);
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/Rectangle17@2x.png") center center no-repeat
+          @basic_green;
+        background-size: cover;
+      }
     }
   }
 }
@@ -116,11 +131,29 @@
 .about-us {
   display: flex;
   align-items: center;
+  background: url("../img/header-bg.png"), url("../img/header-bg1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 302px, 320px 302px;
+  background-position: center top, center top;
+  color: @basic_white;
+  z-index: 2;
+
+  @media (min-resolution: 2dppx) {
+    background: @basic_green, url("../img/header-bg1@2x.png");
+    background-repeat: no-repeat;
+    background-size: 100% 302px, 320px 302px;
+    background-position: center top, center top;
+    z-index: 2;
+  }
+
+  @media (min-width: @tablet-width) {
+    background: none;
+  }
 }
 
 .about-us__image {
-  padding-top: 10px;
-  padding-bottom: 8px;
+  padding-top: 15px;
+  padding-bottom: 5px;
 
   @media (min-width: @tablet-width) {
     width: 709px;
@@ -134,7 +167,7 @@
     height: 499px;
     z-index: 3;
     position: absolute;
-    top: 5px;
-    left: 555px;
+    top: 11px;
+    left: 559px;
   }
 }

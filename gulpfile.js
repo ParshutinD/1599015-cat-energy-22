@@ -3,6 +3,7 @@ const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const less = require("gulp-less");
 const postcss = require("gulp-postcss");
+const csso = require("postcss-csso");
 const htmlmin = require ("gulp-htmlmin");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
@@ -18,34 +19,22 @@ const del = require("del");
 
 const styles = () => {
   return gulp.src("source/less/style.less")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
-    .pipe(sync.stream());
-}
+  .pipe(plumber())
+  .pipe(sourcemap.init())
+  .pipe(less())
+  .pipe(gulp.dest("build/css"))
+  .pipe(postcss([
+  autoprefixer(),
+  csso()
+  ]))
+  .pipe(sourcemap.write("."))
+  .pipe(rename("style.min.css"))
+  .pipe(gulp.dest("build/css"))
+  .pipe(sync.stream());
+  }
 
-exports.styles = styles;
 
-const stylesmin = () => {
-  return gulp.src("source/less/style.less")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(less())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    .pipe(rename("style.min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    .pipe(sync.stream());
-}
-
-exports.stylesmin = stylesmin;
+  exports.styles = styles;
 
 // HTML
 
@@ -61,6 +50,7 @@ exports.html = html;
 
 const scripts = () => {
   return gulp.src("source/js/script.js")
+  .pipe(gulp.dest("build/js"))
   .pipe(terser())
   .pipe(rename("script.min.js"))
   .pipe(gulp.dest("build/js"))
@@ -181,7 +171,7 @@ const build = gulp.series(
   copy,
   optimizeImages,
   gulp.parallel(
-    stylesmin,
+    styles,
     html,
     scripts,
     sprite,
@@ -198,7 +188,7 @@ exports.default = gulp.series(
   copy,
   copyImages,
   gulp.parallel(
-    stylesmin,
+    styles,
     html,
     scripts,
     sprite,
