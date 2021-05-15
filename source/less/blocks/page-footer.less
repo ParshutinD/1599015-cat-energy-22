@@ -125,7 +125,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 5px;
+    padding-top: 0;
+    padding-bottom: 2px;
   }
 }
 
@@ -143,12 +144,12 @@
 
 // SVG logo-html-academy
 
-.shield-small {
+.page-footer__shield-small {
   display: none;
 }
 
-.page-footer__logo-htmlacademy:hover .shield-small,
-.page-footer__logo-htmlacademy:hover .shield-long {
+.page-footer__logo-htmlacademy:hover .page-footer__shield-small,
+.page-footer__logo-htmlacademy:hover .page-footer__shield-long {
   fill: #68b738;
 }
 
@@ -157,13 +158,13 @@
 }
 
 @media (min-width: @tablet-width) {
-  .shield-small {
+  .page-footer__shield-small {
     display: block;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .shield-long {
+  .page-footer__shield-long {
     display: none;
   }
 }

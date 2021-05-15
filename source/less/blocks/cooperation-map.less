@@ -1,0 +1,61 @@
+.cooperation-map__title {
+  .fonts();
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 21px;
+  text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    padding-left: 30px;
+    line-height: 25px;
+  }
+}
+
+.cooperation-map__subtitle {
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    min-width: 171px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+    padding-right: 45px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 25px;
+    text-align: start;
+    padding-bottom: 8px;
+
+    &:last-child {
+      margin-top: 10px;
+    }
+  }
+
+  &:first-child {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.cooperation-map {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 201px;
+    background-color: @basic_white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 95px;
+  }
+}

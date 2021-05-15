@@ -38,19 +38,25 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .services__item:last-child .services__link {
+    padding-bottom: 10px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .services__item:last-child .services__link {
-    padding-bottom: 35px;
+    padding-bottom: 40px;
   }
 
   .services__item:last-child .services__title--pro {
-    padding-bottom: 20px;
-    padding-top: 45px;
+    padding-bottom: 35px;
+    padding-top: 50px;
   }
 
   .services__item:last-child .services__subtitle--pro {
     padding-bottom: 30px;
-    padding-top: 20px;
+    padding-top: 0;
   }
 }
 
@@ -182,6 +188,11 @@
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 30px;
+    vertical-align: middle;
+
+    &::after {
+      padding-left: 26px;
+    }
   }
 
   @media (min-width: @desktop-width) {

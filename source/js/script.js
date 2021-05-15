@@ -20,32 +20,32 @@ navToggle.addEventListener("click", function () {
 
 inputEmail.addEventListener("input", function (event) {
   if (!inputEmail.validity.valid) {
-    inputEmail.classList.add("error");
+    inputEmail.classList.add("main-form_error");
   } else {
-    inputEmail.classList.remove("error");
+    inputEmail.classList.remove("main-form_error");
   }
 });
 
 inputPhone.addEventListener("input", function (event) {
   if (!inputPhone.validity.valid) {
-    inputPhone.classList.add("error");
+    inputPhone.classList.add("main-form_error");
   } else {
-    inputPhone.classList.remove("error");
+    inputPhone.classList.remove("main-form_error");
   }
 });
 
 inputName.addEventListener("input", function (event) {
   if (!inputName.validity.valid) {
-    inputName.classList.add("error");
+    inputName.classList.add("main-form_error");
   } else {
-    inputName.classList.remove("error");
+    inputName.classList.remove("main-form_error");
   }
 });
 
 inputWeight.addEventListener("input", function (event) {
   if (!inputWeight.validity.valid) {
-    inputWeight.classList.add("error");
+    inputWeight.classList.add("main-form_error");
   } else {
-    inputWeight.classList.remove("error");
+    inputWeight.classList.remove("main-form_error");
   }
 });

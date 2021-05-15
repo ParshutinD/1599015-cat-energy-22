@@ -1,0 +1,210 @@
+.example-slider__image {
+  @media (min-width: @tablet-width) {
+    width: 708px;
+    height: 620px;
+    padding-top: 15px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 12px;
+    width: 270px;
+    padding-left: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 700px;
+    height: 645px;
+    padding-top: 0;
+  }
+}
+
+.example-slider__image-wrapper {
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.example-slider {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: -55px;
+    left: 675px;
+  }
+}
+
+.example-slider__button {
+  border: none;
+  background: none;
+  border-bottom: 1px dotted @special_grey;
+
+  @media (max-width: @mobile-width-only) {
+    .fonts();
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: @tablet-width) {
+    .fonts();
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+}
+
+.example-slider__button:first-child {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 580px;
+    left: 62px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 550px;
+    left: 78px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 278px;
+    left: 38px;
+  }
+}
+
+.example-slider__button:last-child {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 580px;
+    right: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 550px;
+    right: 40px;
+  }
+
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 278px;
+    right: 34px;
+  }
+}
+
+.example-slider__wrap {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+@media (max-width: @mobile-width-only) {
+  .example-slider__range-controls-large {
+    align-self: center;
+    text-transform: uppercase;
+    position: relative;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .example-slider__scale-large {
+    width: 84px;
+    height: 14px;
+    margin-bottom: 25px;
+    background-color: @basic_white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+  }
+
+  .example-slider__toggle {
+    width: 35px;
+    height: 6px;
+    background-color: @basic_green;
+    position: absolute;
+    top: 4.5px;
+    left: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example-slider__scale-large {
+    width: 428px;
+    height: 6px;
+    background-color: @special_grey;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    top: 600px;
+    left: 140px;
+  }
+
+  .example-slider__button:hover {
+    border-bottom: 1px solid @special_grey;
+  }
+
+  .example-slider__button:active {
+    border-bottom: none;
+  }
+
+  .example-slider__toggle {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    background-color: @basic_green;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 210px;
+    box-shadow: 0 0 1px 13px @basic_white,
+      0 0 1px 14px @special_grey,
+      0 1px 20px @toggle-shadow-1;
+
+    &:hover {
+      box-shadow: 0 0 1px 13px @basic_white,
+        0 0 1px 14px @special_grey,
+        0 1px 25px @toggle-shadow-1;
+    }
+
+    &:active {
+      box-shadow: 0 0 1px 13px @basic_white,
+        0 0 1px 14px @basic_green,
+        0 1px 21px @toggle-shadow-1;
+    }
+
+    &:focus {
+      box-shadow: 0 0 1px 13px @basic_white,
+        0 0 1px 14px @basic_green,
+        0 1px 21px @toggle-shadow-1;
+      outline: none;
+    }
+  }
+}
+
+.example-slider__range-controls-large {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: -10px;
+    left: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: -35px;
+    left: 15px;
+  }
+}

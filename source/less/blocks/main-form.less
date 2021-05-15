@@ -29,12 +29,12 @@
   fill: @basic_green;
 }
 
-.error + .main-form__icon-phone,
-.error + .main-form__icon-email {
+.main-form_error + .main-form__icon-phone,
+.main-form_error + .main-form__icon-email {
   fill: @input-invalid;
 }
 
-.main-form .error {
+.main-form .main-form_error {
   border-color: @input-invalid;
 }
 
@@ -376,7 +376,7 @@
   @media (min-width: @tablet-width) {
     width: 18px;
     height: 18px;
-    top: 15px;
+    top: 18px;
     left: 21px;
     transform: translate(-50%, -50%);
   }
